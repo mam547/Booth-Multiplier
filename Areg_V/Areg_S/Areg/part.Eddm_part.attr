@@ -1,0 +1,12 @@
+A 5 u Eddm_part 622147cf21b1.03.7f.00.01.01.00.cd.22 2 2 2 0
+V v 1 1 622147cf21b1.03.7f.00.01.01.01.cd.22
+F f 1 "part.part_1"
+V v 2 1 622147cf2882.03.7f.00.01.01.00.cd.22
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/gota/EECS301/lab3/Areg_V/Areg_S/Areg/Areg" 1 mgc_symbol 622147cf2143.03.7f.00.01.01.01.cd.22 622147cf2143.03.7f.00.01.01.00.cd.22
+R csduv 1 "/home/gota/EECS301/lab3/Areg_V/Areg_S/Areg/schematic" 1 mgc_schematic 622147cf225c.03.7f.00.01.01.01.cd.22 622147cf225c.03.7f.00.01.01.00.cd.22
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/gota/EECS301/lab3/Areg_V/Areg_S/Areg/Areg" 1 mgc_symbol 622147cf2143.03.7f.00.01.01.01.cd.22 622147cf2143.03.7f.00.01.01.00.cd.22

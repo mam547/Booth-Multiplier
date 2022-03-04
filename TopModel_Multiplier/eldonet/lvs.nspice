@@ -1,0 +1,539 @@
+* LVS netlist generated with ICnet by 'gota' on Thu Mar  3 2022 at 19:01:40
+
+*
+* Globals.
+*
+.global GND VDD
+
+*
+* Component pathname : $ADK/parts/buf02
+*
+.subckt buf02  A Y
+
+        M_I$614 Y N$411 VDD VDD p L=0.6u W=5.4u
+        M_I$615 Y N$411 GND GND n L=0.6u W=3u
+        M_I$411 N$411 A VDD VDD p L=0.6u W=2.7u
+        M_I$412 N$411 A GND GND n L=0.6u W=1.5u
+.ends buf02
+
+*
+* Component pathname : $ADK/parts/inv02
+*
+.subckt inv02  A Y
+
+        M_I$6 Y A VDD VDD p L=0.6u W=5.4u
+        M_I$5 Y A GND GND n L=0.6u W=3u
+.ends inv02
+
+*
+* Component pathname : $ADK/parts/xor2
+*
+.subckt xor2  Y A0 A1
+
+        M_I$421 Y N$4 GND GND n L=0.6u W=1.5u
+        M_I$420 Y N$4 VDD VDD p L=0.6u W=2.7u
+        M_I$218 N$213 A1 GND GND n L=0.6u W=3u
+        M_I$217 N$212 A0 N$213 GND n L=0.6u W=3u
+        M_I$9 N$212 A1 VDD VDD p L=0.6u W=3.9u
+        M_I$8 N$212 A0 VDD VDD p L=0.6u W=3.9u
+        M_I$7 N$3 N$212 GND GND n L=0.6u W=3u
+        M_I$6 N$4 A1 N$3 GND n L=0.6u W=3u
+        M_I$5 N$4 A0 N$3 GND n L=0.6u W=3u
+        M_I$4 N$4 A1 N$1 VDD p L=0.6u W=7.8u
+        M_I$3 N$4 N$212 VDD VDD p L=0.6u W=3.9u
+        M_I$2 N$1 A0 VDD VDD p L=0.6u W=7.8u
+.ends xor2
+
+*
+* Component pathname : $ADK/parts/nor02_2x
+*
+.subckt nor02_2x  A0 A1 Y
+
+        M_I$5 Y A0 GND GND n L=0.6u W=3u
+        M_I$4 Y A1 GND GND n L=0.6u W=3u
+        M_I$3 Y A1 N$1 VDD p L=0.6u W=7.8u
+        M_I$2 N$1 A0 VDD VDD p L=0.6u W=7.8u
+.ends nor02_2x
+
+*
+* Component pathname : $ADK/parts/nand02_2x
+*
+.subckt nand02_2x  Y A0 A1
+
+        M_I$9 Y A1 VDD VDD p L=0.6u W=6u
+        M_I$8 Y A0 VDD VDD p L=0.6u W=6u
+        M_I$3 Y A0 N$5 GND n L=0.6u W=6u
+        M_I$2 N$5 A1 GND GND n L=0.6u W=6u
+.ends nand02_2x
+
+*
+* Component pathname : $ADK/parts/xnor2
+*
+.subckt xnor2  Y A0 A1
+
+        M_I$218 N$213 A1 GND GND n L=0.6u W=3u
+        M_I$217 N$212 A0 N$213 GND n L=0.6u W=3u
+        M_I$9 N$212 A1 VDD VDD p L=0.6u W=3.9u
+        M_I$8 N$212 A0 VDD VDD p L=0.6u W=3.9u
+        M_I$7 N$3 N$212 GND GND n L=0.6u W=3u
+        M_I$6 Y A1 N$3 GND n L=0.6u W=3u
+        M_I$5 Y A0 N$3 GND n L=0.6u W=3u
+        M_I$4 Y A1 N$1 VDD p L=0.6u W=7.8u
+        M_I$3 Y N$212 VDD VDD p L=0.6u W=3.9u
+        M_I$2 N$1 A0 VDD VDD p L=0.6u W=7.8u
+.ends xnor2
+
+*
+* Component pathname : $ADK/parts/nor02ii
+*
+.subckt nor02ii  A0 A1 Y
+
+        MP1 N$208 A1 VDD VDD p L=0.6u W=2.7u
+        MN1 N$208 A1 GND GND n L=0.6u W=1.5u
+        MN4 Y A0 GND GND n L=0.6u W=1.5u
+        MN2 Y N$208 GND GND n L=0.6u W=1.5u
+        MP4 Y N$208 N$4 VDD p L=0.6u W=3.9u
+        MP2 N$4 A0 VDD VDD p L=0.6u W=3.9u
+.ends nor02ii
+
+*
+* Component pathname : $ADK/parts/aoi22
+*
+.subckt aoi22  B1 A0 A1 B0 Y
+
+        M_I$425 Y B0 N$9 GND n L=0.6u W=3u
+        M_I$426 Y B1 N$4 VDD p L=0.6u W=3.9u
+        M_I$12 N$8 A1 GND GND n L=0.6u W=3u
+        M_I$11 Y A0 N$8 GND n L=0.6u W=3u
+        M_I$7 Y B0 N$4 VDD p L=0.6u W=3.9u
+        M_I$6 N$4 A1 VDD VDD p L=0.6u W=3.9u
+        M_I$5 N$4 A0 VDD VDD p L=0.6u W=3.9u
+        M_I$13 N$9 B1 GND GND n L=0.6u W=3u
+.ends aoi22
+
+*
+* Component pathname : $ADK/parts/mux21
+*
+.subckt mux21  S0 A0 A1 Y
+
+        M_I$5 Y S0 N$10 VDD p L=0.6u W=5.4u
+        M_I$13 N$6 A1 GND GND n L=0.6u W=3u
+        M_I$12 Y S0 N$6 GND n L=0.6u W=3u
+        M_I$17 Y N$7 N$5 VDD p L=0.6u W=5.4u
+        M_I$16 N$5 A1 VDD VDD p L=0.6u W=5.4u
+        M_I$7 N$4 A0 GND GND n L=0.6u W=3u
+        M_I$6 Y N$7 N$4 GND n L=0.6u W=3u
+        M_I$4 N$10 A0 VDD VDD p L=0.6u W=5.4u
+        M_I$3 N$7 S0 GND GND n L=0.6u W=1.5u
+        M_I$2 N$7 S0 VDD VDD p L=0.6u W=2.7u
+.ends mux21
+
+*
+* Component pathname : $ADK/parts/mux21_ni
+*
+.subckt mux21_ni  S0 A0 A1 Y
+
+        M_I$18 Y N$11 GND GND n L=0.6u W=1.5u
+        M_I$17 Y N$11 VDD VDD p L=0.6u W=2.7u
+        M_I$16 N$11 S0 N$7 VDD p L=0.6u W=5.4u
+        M_I$11 N$3 A1 GND GND n L=0.6u W=3u
+        M_I$10 N$11 S0 N$3 GND n L=0.6u W=3u
+        M_I$9 N$11 N$4 N$2 VDD p L=0.6u W=5.4u
+        M_I$8 N$2 A1 VDD VDD p L=0.6u W=5.4u
+        M_I$7 N$1 A0 GND GND n L=0.6u W=3u
+        M_I$6 N$11 N$4 N$1 GND n L=0.6u W=3u
+        M_I$4 N$7 A0 VDD VDD p L=0.6u W=5.4u
+        M_I$3 N$4 S0 GND GND n L=0.6u W=1.5u
+        M_I$2 N$4 S0 VDD VDD p L=0.6u W=2.7u
+.ends mux21_ni
+
+*
+* Component pathname : $ADK/parts/dff
+*
+.subckt dff  QB Q CLK D
+
+        M_I$441 N$847 bclk- N$851 GND n L=0.6u W=4.5u
+        M_I$440 N$849 N$847 VDD VDD p L=0.6u W=1.5u
+        M_I$439 N$847 bclk- N$848 VDD p L=0.6u W=1.5u
+        M_I$438 N$848 N$849 VDD VDD p L=0.6u W=1.5u
+        M_I$437 N$847 bclk N$845 VDD p L=0.6u W=8.1u
+        M_I$436 N$845 D VDD VDD p L=0.6u W=8.1u
+        M_I$452 bclk bclk- GND GND n L=0.6u W=3u
+        M_I$673 Q QB GND GND n L=0.6u W=3u
+        M_I$672 Q QB VDD VDD p L=0.6u W=5.4u
+        M_I$669 QB N$1074 GND GND n L=0.6u W=3u
+        M_I$675 QB N$1074 VDD VDD p L=0.6u W=5.4u
+        M_I$668 N$1071 N$1074 GND GND n L=0.6u W=1.5u
+        M_I$667 N$1073 N$1071 GND GND n L=0.6u W=1.5u
+        M_I$666 N$1074 bclk- N$1073 GND n L=0.6u W=1.5u
+        M_I$665 N$1072 N$847 GND GND n L=0.6u W=4.5u
+        M_I$664 N$1074 bclk N$1072 GND n L=0.6u W=4.5u
+        M_I$663 N$1071 N$1074 VDD VDD p L=0.6u W=1.5u
+        M_I$662 N$1074 bclk N$1070 VDD p L=0.6u W=1.5u
+        M_I$661 N$1070 N$1071 VDD VDD p L=0.6u W=1.5u
+        M_I$660 N$1074 bclk- N$1069 VDD p L=0.6u W=8.1u
+        M_I$659 N$1069 N$847 VDD VDD p L=0.6u W=8.1u
+        M_I$449 bclk- CLK GND GND n L=0.6u W=3u
+        M_I$448 bclk- CLK VDD VDD p L=0.6u W=5.4u
+        M_I$453 bclk bclk- VDD VDD p L=0.6u W=5.4u
+        M_I$445 N$849 N$847 GND GND n L=0.6u W=1.5u
+        M_I$444 N$852 N$849 GND GND n L=0.6u W=1.5u
+        M_I$443 N$847 bclk N$852 GND n L=0.6u W=1.5u
+        M_I$442 N$851 D GND GND n L=0.6u W=4.5u
+.ends dff
+
+*
+* Component pathname : $ADK/parts/oai21
+*
+.subckt oai21  A0 A1 B0 Y
+
+        M_I$5 N$7 B0 GND GND n L=0.6u W=3u
+        M_I$4 Y A1 N$7 GND n L=0.6u W=3u
+        M_I$3 Y A0 N$7 GND n L=0.6u W=3u
+        M_I$12 Y B0 VDD VDD p L=0.6u W=3.6u
+        M_I$2 Y A1 N$9 VDD p L=0.6u W=7.2u
+        M_I$1 N$9 A0 VDD VDD p L=0.6u W=7.2u
+.ends oai21
+
+*
+* Component pathname : $ADK/parts/and02
+*
+.subckt and02  Y A0 A1
+
+        M_I$674 Y N$5 VDD VDD p L=0.6u W=2.7u
+        M_I$675 Y N$5 GND GND n L=0.6u W=1.5u
+        M_I$472 N$5 A1 VDD VDD p L=0.6u W=3.6u
+        M_I$471 N$5 A0 VDD VDD p L=0.6u W=3.6u
+        M_I$4 N$5 A0 N$7 GND n L=0.6u W=3u
+        M_I$5 N$7 A1 GND GND n L=0.6u W=3u
+.ends and02
+
+*
+* Component pathname : $ADK/parts/or02
+*
+.subckt or02  A0 A1 Y
+
+        M_I$212 Y N$5 GND GND n L=0.6u W=1.5u
+        M_I$211 Y N$5 VDD VDD p L=0.6u W=2.7u
+        M_I$5 N$5 A0 GND GND n L=0.6u W=1.5u
+        M_I$4 N$5 A1 GND GND n L=0.6u W=1.5u
+        M_I$3 N$5 A1 N$1 VDD p L=0.6u W=3.9u
+        M_I$2 N$1 A0 VDD VDD p L=0.6u W=3.9u
+.ends or02
+
+*
+* Component pathname : $ADK/parts/ao32
+*
+.subckt ao32  Y A0 A1 A2 B0 B1
+
+        M_I$222 Y N$214 GND GND n L=0.6u W=1.5u
+        M_I$221 Y N$214 VDD VDD p L=0.6u W=2.7u
+        M_I$12 N$6 B1 GND GND n L=0.6u W=3u
+        M_I$11 N$214 B0 N$6 GND n L=0.6u W=3u
+        M_I$10 N$5 A2 GND GND n L=0.6u W=4.5u
+        M_I$9 N$4 A1 N$5 GND n L=0.6u W=4.5u
+        M_I$8 N$214 A0 N$4 GND n L=0.6u W=4.5u
+        M_I$6 N$214 B0 N$11 VDD p L=0.6u W=3.9u
+        M_I$5 N$214 B1 N$11 VDD p L=0.6u W=3.9u
+        M_I$4 N$11 A0 VDD VDD p L=0.6u W=3.9u
+        M_I$3 N$11 A1 VDD VDD p L=0.6u W=3.9u
+        M_I$2 N$11 A2 VDD VDD p L=0.6u W=3.9u
+.ends ao32
+
+*
+* Component pathname : $ADK/parts/aoi21
+*
+.subckt aoi21  A0 A1 B0 Y
+
+        M_I$12 N$8 A1 GND GND n L=0.6u W=3u
+        M_I$11 Y A0 N$8 GND n L=0.6u W=3u
+        M_I$7 Y B0 N$4 VDD p L=0.6u W=3.9u
+        M_I$6 N$4 A1 VDD VDD p L=0.6u W=3.9u
+        M_I$5 N$4 A0 VDD VDD p L=0.6u W=3.9u
+        M_I$13 Y B0 GND GND n L=0.6u W=1.5u
+.ends aoi21
+
+*
+* Component pathname : $ADK/parts/nor03
+*
+.subckt nor03  A2 A0 A1 Y
+
+        M_I$213 Y A0 GND GND n L=0.6u W=1.8u
+        M_I$211 Y A2 N$211 VDD p L=0.6u W=8.1u
+        M_I$5 Y A1 GND GND n L=0.6u W=1.8u
+        M_I$4 Y A2 GND GND n L=0.6u W=1.8u
+        M_I$3 N$211 A1 N$1 VDD p L=0.6u W=8.1u
+        M_I$2 N$1 A0 VDD VDD p L=0.6u W=8.1u
+.ends nor03
+
+*
+* Component pathname : $ADK/parts/nor03_2x
+*
+.subckt nor03_2x  A1 A0 A2 Y
+
+        M_I$12 Y A0 GND GND n L=0.6u W=3.3u
+        M_I$10 Y A2 N$3 VDD p L=0.6u W=12u
+        M_I$5 Y A1 GND GND n L=0.6u W=3.3u
+        M_I$4 Y A2 GND GND n L=0.6u W=3.3u
+        M_I$3 N$3 A1 N$1 VDD p L=0.6u W=12u
+        M_I$2 N$1 A0 VDD VDD p L=0.6u W=12u
+.ends nor03_2x
+
+*
+* Component pathname : $ADK/parts/aoi221
+*
+.subckt aoi221  A0 A1 B0 B1 C0 Y
+
+        M_I$13 Y C0 GND GND n L=0.6u W=3u
+        M_I$12 N$8 B1 GND GND n L=0.6u W=4.5u
+        M_I$11 Y B0 N$8 GND n L=0.6u W=4.5u
+        M_I$9 N$6 A1 GND GND n L=0.6u W=4.5u
+        M_I$8 Y A0 N$6 GND n L=0.6u W=4.5u
+        M_I$7 Y C0 N$4 VDD p L=0.6u W=7.2u
+        M_I$6 N$4 B0 N$14 VDD p L=0.6u W=7.2u
+        M_I$5 N$4 B1 N$14 VDD p L=0.6u W=7.2u
+        M_I$3 N$14 A1 VDD VDD p L=0.6u W=7.2u
+        M_I$2 N$14 A0 VDD VDD p L=0.6u W=7.2u
+.ends aoi221
+
+*
+* Component pathname : $ADK/parts/ao21
+*
+.subckt ao21  A1 A0 B0 Y
+
+        M_I$14 Y N$3 VDD VDD p L=0.6u W=2.7u
+        M_I$13 Y N$3 GND GND n L=0.6u W=1.5u
+        M_I$12 N$2 A1 GND GND n L=0.6u W=3u
+        M_I$11 N$3 A0 N$2 GND n L=0.6u W=3u
+        M_I$7 N$3 B0 N$1 VDD p L=0.6u W=3.9u
+        M_I$6 N$1 A1 VDD VDD p L=0.6u W=3.9u
+        M_I$5 N$1 A0 VDD VDD p L=0.6u W=3.9u
+        M_I$4 N$3 B0 GND GND n L=0.6u W=1.5u
+.ends ao21
+
+*
+* Component pathname : $ADK/parts/nor04
+*
+.subckt nor04  A3 A2 A0 A1 Y
+
+        M_I$415 Y A3 GND GND n L=0.6u W=3u
+        M_I$416 Y A3 N$418 VDD p L=0.6u W=10.8u
+        M_I$213 Y A0 GND GND n L=0.6u W=3u
+        M_I$211 N$418 A2 N$211 VDD p L=0.6u W=10.8u
+        M_I$5 Y A1 GND GND n L=0.6u W=3u
+        M_I$4 Y A2 GND GND n L=0.6u W=3u
+        M_I$3 N$211 A1 N$1 VDD p L=0.6u W=10.8u
+        M_I$2 N$1 A0 VDD VDD p L=0.6u W=10.8u
+.ends nor04
+
+*
+* Component pathname : $ADK/parts/ao22
+*
+.subckt ao22  A1 A0 B0 Y B1
+
+        M_I$16 Y N$215 VDD VDD p L=0.6u W=2.7u
+        M_I$18 Y N$215 GND GND n L=0.6u W=1.5u
+        M_I$14 N$215 B0 N$2 GND n L=0.6u W=3u
+        M_I$13 N$215 B1 N$6 VDD p L=0.6u W=3.9u
+        M_I$12 N$1 A1 GND GND n L=0.6u W=3u
+        M_I$11 N$215 A0 N$1 GND n L=0.6u W=3u
+        M_I$7 N$215 B0 N$6 VDD p L=0.6u W=3.9u
+        M_I$6 N$6 A1 VDD VDD p L=0.6u W=3.9u
+        M_I$5 N$6 A0 VDD VDD p L=0.6u W=3.9u
+        M_I$4 N$2 B1 GND GND n L=0.6u W=3u
+.ends ao22
+
+*
+* Component pathname : /home/gota/EECS301/lab3/Multiplier_V/Multiplier_S/Multiplier
+*
+.subckt Multiplier  multiplicand[0] multiplicand[1] multiplicand[2] multiplicand[3]
++ multiplier[0] multiplier[1] multiplier[2] multiplier[3] result[0] result[1]
++ result[2] result[3] result[4] result[5] result[6] result[7] clk finished
++ start
+
+        X_cl0_ix417 cl0_nx371 cl0_nx418 buf02
+        X_cl0_ix415 cl0_nx313 cl0_nx416 buf02
+        X_cl0_ix409 cl0_nx298 cl0_nx410 inv02
+        X_ix548 cl0_nx298 nx549 inv02
+        X_cl0_ix161 cl0_nx392 cl0_nx160 inv02
+        X_cl0_ix15 cl0_nx362 cl0_nx14 inv02
+        X_cl0_ix411 cl0_nx367 cl0_nx412 inv02
+        X_cl0_ix299 cl0_nx145 cl0_nx298 inv02
+        X_cl0_ix63 cl0_nx321 cl0_nx147 inv02
+        X_cl0_ix352 cl0_nx156 m_QRegOut_0 cl0_m_QNeg xor2
+        X_cl0_ix335 cl0_m_Cnt_0 cl0_m_Cnt_1 cl0_nx334 nor02_2x
+        X_cl0_ix191 cl0_nx349 cl0_nx367 cl0_nx304 nor02_2x
+        X_cl0_ix393 cl0_nx392 cl0_nx418 cl0_nx156 nand02_2x
+        X_ix169 nx168 nx369 nx166 xnor2
+        X_ix167 nx166 m_AddSubA_2 nx164 xnor2
+        X_ix165 nx164 m_AddSubCtrl m_AddSubB_2 xnor2
+        X_ix225 nx224 m_AddSubCtrl m_AddSubB_3 xnor2
+        X_ix227 nx226 m_AddSubA_3 nx224 xnor2
+        X_ix229 nx228 nx358 nx226 xnor2
+        X_cl0_ix356 cl0_nx416 cl0_nx102 cl0_nx355 nor02ii
+        X_cl0_ix101 start cl0_m_NextState_2 cl0_nx145 nor02ii
+        X_cl0_ix370 cl0_nx319 cl0_nx416 cl0_nx321 cl0_nx418 cl0_nx369 aoi22
+        X_cl0_ix83 nx549 cl0_nx345 cl0_nx362 cl0_nx82 mux21
+        X_cl0_ix216 cl0_nx424 cl0_nx319 cl0_nx317 cl0_nx215 mux21
+        X_ix359 nx166 nx164 nx369 nx358 mux21_ni
+        X_cl0_ix236 cl0_nx426 cl0_nx14 nx545 cl0_nx235 mux21_ni
+        X_cl0_ix256 cl0_nx426 cl0_nx82 m_ARegCtrl_0 cl0_nx255 mux21_ni
+        X_cl0_ix226 cl0_nx424 cl0_nx164 finished cl0_nx225 mux21_ni
+        X_cl0_ix196 cl0_nx424 cl0_nx116 cl0_m_NextState_0 cl0_nx195 mux21_ni
+        X_cl0_reg_m_QNeg cl0_nx359 cl0_m_QNeg cl0_nx414 cl0_nx205 dff
+        X_cl0_reg_m_NextState_1 cl0_nx317 cl0_m_NextState_1 cl0_nx414 cl0_nx215 dff
+        X_cl0_reg_m_NextState_0 cl0_nx306 cl0_m_NextState_0 cl0_nx414 cl0_nx195 dff
+        X_cl0_ix366 nx549 cl0_nx412 cl0_nx349 cl0_nx365 oai21
+        X_cl0_ix363 cl0_nx362 cl0_nx349 cl0_nx367 and02
+        X_cl0_ix185 start cl0_nx317 cl0_nx367 or02
+        X_cl0_ix127 start cl0_nx306 cl0_nx349 or02
+        X_cl0_ix206 cl0_nx205 m_QRegNeg cl0_nx410 cl0_nx416 cl0_m_QNeg cl0_nx355 ao32
+        X_cl0_ix286 cl0_nx285 m_QRegOut_0 cl0_nx359 cl0_nx418 m_AddSubCtrl
++ cl0_nx392 ao32
+        X_cl0_ix333 cl0_m_Cnt_1 cl0_m_Cnt_0 cl0_nx334 cl0_nx332 aoi21
+        X_cl0_ix184 cl0_nx365 cl0_nx369 cl0_nx424 cl0_nx183 aoi21
+        X_cl0_ix264 cl0_nx349 cl0_nx298 cl0_nx424 cl0_nx263 aoi21
+        X_cl0_ix154 cl0_nx14 cl0_m_Cnt_0 cl0_nx298 cl0_nx153 nor03
+        X_cl0_ix164 cl0_nx14 cl0_nx298 cl0_nx332 cl0_nx163 nor03
+        X_cl0_ix346 cl0_m_NextState_0 start cl0_nx317 cl0_nx345 nor03_2x
+        X_cl0_ix320 cl0_nx416 cl0_nx321 cl0_nx410 cl0_nx345 cl0_nx160 cl0_nx319 aoi221
+        X_cl0_ix156 cl0_nx14 cl0_m_Cnt_0 cl0_nx153 cl0_nx155 ao21
+        X_cl0_ix166 cl0_nx14 cl0_m_Cnt_1 cl0_nx163 cl0_nx165 ao21
+        X_cl0_ix186 cl0_nx424 cl0_m_NextState_2 cl0_nx183 cl0_nx185 ao21
+        X_cl0_ix117 cl0_nx147 cl0_nx416 cl0_nx362 cl0_nx116 ao21
+        X_cl0_ix266 cl0_nx424 m_ARegCtrl_1 cl0_nx263 cl0_nx265 ao21
+        X_cl0_ix165 cl0_nx317 cl0_m_NextState_0 cl0_nx298 start cl0_nx164 nor04
+        X_cl0_ix372 cl0_nx306 cl0_m_NextState_2 start cl0_m_NextState_1
++ cl0_nx371 nor04
+        X_cl0_ix314 cl0_nx306 cl0_nx298 start cl0_m_NextState_1 cl0_nx313 nor04
+        X_cl0_ix423 cl0_nx304 cl0_nx424 buf02
+        X_cl0_ix425 cl0_nx304 cl0_nx426 buf02
+        X_ix477 m_ARegCtrl_1 nx478 buf02
+        X_ix479 m_MRegCtrl nx480 buf02
+        X_ix481 m_MRegCtrl nx482 buf02
+        X_ix37 m_ARegCtrl_0 nx478 nx36 nor02_2x
+        X_ix31 nx30 nx476 m_ARegCtrl_0 nand02_2x
+        X_ix336 nx36 nx476 ar0_m_Reg_1 m_AddSubOut_0 nx335 aoi22
+        X_ix350 nx36 nx476 ar0_m_Reg_3 m_AddSubOut_2 nx349 aoi22
+        X_ix342 nx36 nx476 ar0_m_Reg_2 m_AddSubOut_1 nx341 aoi22
+        X_ix283 nx30 nx333 nx335 nx282 mux21
+        X_ix250 nx30 nx333 nx335 nx249 mux21
+        X_ix79 nx30 nx339 nx341 nx78 mux21
+        X_ix240 nx30 nx339 nx341 nx239 mux21
+        X_ix140 nx30 nx347 nx349 nx136 mux21
+        X_ix230 nx30 nx347 nx349 nx229 mux21
+        X_ix305 ar0_m_Reg_0 nx476 m_AddSubOut_0 nx304 nx36 ao22
+        X_ix180 nx480 mr0_m_Reg_0 multiplicand[0] nx179 mux21_ni
+        X_ix53 nx480 mr0_m_Reg_0 multiplicand[0] nx52 mux21_ni
+        X_ix190 nx480 mr0_m_Reg_1 multiplicand[1] nx189 mux21_ni
+        X_ix99 nx480 mr0_m_Reg_1 multiplicand[1] nx98 mux21_ni
+        X_ix200 nx480 mr0_m_Reg_2 multiplicand[2] nx199 mux21_ni
+        X_ix157 nx480 mr0_m_Reg_2 multiplicand[2] nx156 mux21_ni
+        X_ix210 nx480 mr0_m_Reg_3 multiplicand[3] nx209 mux21_ni
+        X_ix217 nx482 mr0_m_Reg_3 multiplicand[3] nx216 mux21_ni
+        X_ix345 m_QRegCtrl_1 multiplier[0] qr0_m_Reg_1 nx344 mux21_ni
+        X_ix355 m_QRegCtrl_1 multiplier[0] qr0_m_Reg_0 nx354 mux21_ni
+        X_ix335 m_QRegCtrl_1 multiplier[1] qr0_m_Reg_2 nx334 mux21_ni
+        X_ix325 m_QRegCtrl_1 multiplier[2] qr0_m_Reg_3 nx324 mux21_ni
+        X_ix315 m_QRegCtrl_1 multiplier[3] m_QRegCarry nx314 mux21_ni
+        X_ar0_reg_m_Reg_0 nx333 ar0_m_Reg_0 clk nx249 dff
+        X_ar0_reg_m_Reg_1 nx339 ar0_m_Reg_1 clk nx239 dff
+        X_ar0_reg_m_Reg_2 nx347 ar0_m_Reg_2 clk nx229 dff
+        X_reg_m_Result_4 N$dummy_esc1[31] result[4] clk m_AddSubA_0 dff
+        X_qr0_reg_m_O_3 N$dummy_esc1[30] m_QRegOut_3 clk nx428 dff
+        X_reg_m_Result_3 N$dummy_esc1[29] result[3] clk m_QRegOut_3 dff
+        X_qr0_reg_m_O_2 N$dummy_esc1[28] m_QRegOut_2 clk nx408 dff
+        X_reg_m_Result_2 N$dummy_esc1[27] result[2] clk m_QRegOut_2 dff
+        X_qr0_reg_m_O_1 N$dummy_esc1[26] m_QRegOut_1 clk nx388 dff
+        X_reg_m_Result_1 N$dummy_esc1[25] result[1] clk m_QRegOut_1 dff
+        X_reg_m_Result_0 N$dummy_esc1[24] result[0] clk m_QRegOut_0 dff
+        X_qr0_reg_m_O_0 N$dummy_esc1[23] m_QRegOut_0 clk nx368 dff
+        X_as0_reg_m_O_0 N$dummy_esc1[22] m_AddSubOut_0 clk nx292 dff
+        X_as0_reg_m_O_1 N$dummy_esc1[21] m_AddSubOut_1 clk nx110 dff
+        X_as0_reg_m_O_2 N$dummy_esc1[20] m_AddSubOut_2 clk nx168 dff
+        X_mr0_reg_m_Reg_3 N$dummy_esc1[19] mr0_m_Reg_3 clk nx209 dff
+        X_mr0_reg_m_O_3 N$dummy_esc1[18] m_AddSubB_3 clk nx216 dff
+        X_ar0_reg_m_O_3 N$dummy_esc1[17] m_AddSubA_3 clk nx196 dff
+        X_ar0_reg_m_O_2 N$dummy_esc1[16] m_AddSubA_2 clk nx136 dff
+        X_mr0_reg_m_Reg_1 N$dummy_esc1[15] mr0_m_Reg_1 clk nx189 dff
+        X_mr0_reg_m_O_1 N$dummy_esc1[14] m_AddSubB_1 clk nx98 dff
+        X_ar0_reg_m_O_1 N$dummy_esc1[13] m_AddSubA_1 clk nx78 dff
+        X_mr0_reg_m_Reg_0 N$dummy_esc1[12] mr0_m_Reg_0 clk nx179 dff
+        X_mr0_reg_m_O_0 N$dummy_esc1[11] m_AddSubB_0 clk nx52 dff
+        X_ar0_reg_m_O_0 N$dummy_esc1[10] m_AddSubA_0 clk nx282 dff
+        X_mr0_reg_m_Reg_2 N$dummy_esc1[9] mr0_m_Reg_2 clk nx199 dff
+        X_mr0_reg_m_O_2 N$dummy_esc1[8] m_AddSubB_2 clk nx156 dff
+        X_as0_reg_m_O_3 N$dummy_esc1[7] m_AddSubOut_3 clk nx228 dff
+        X_ar0_reg_m_Reg_3 N$dummy_esc1[6] ar0_m_Reg_3 clk nx219 dff
+        X_ar0_reg_m_ShiftBit N$dummy_esc1[5] m_QRegCarry clk nx304 dff
+        X_qr0_reg_m_Reg_3 N$dummy_esc1[4] qr0_m_Reg_3 clk nx259 dff
+        X_qr0_reg_m_Reg_2 N$dummy_esc1[3] qr0_m_Reg_2 clk nx269 dff
+        X_qr0_reg_m_Reg_1 N$dummy_esc1[2] qr0_m_Reg_1 clk nx279 dff
+        X_qr0_reg_m_Reg_0 N$dummy_esc1[1] qr0_m_Reg_0 clk nx289 dff
+        X_qr0_reg_m_ShiftBit N$dummy_esc1[0] m_QRegNeg clk nx299 dff
+        X_ix107 nx106 m_AddSubCtrl m_AddSubB_1 xnor2
+        X_ix435 m_QRegCtrl_1 nx545 nx434 nor02ii
+        X_ix239 m_ARegCtrl_0 m_AddSubOut_3 nx171 nor02ii
+        X_ix370 m_AddSubA_1 nx70 nx108 nx395 nx369 aoi22
+        X_cl0_ix276 cl0_nx426 cl0_nx357 m_MRegCtrl cl0_nx275 mux21_ni
+        X_cl0_ix246 cl0_nx426 cl0_nx102 m_QRegCtrl_1 cl0_nx245 mux21_ni
+        X_ix220 nx476 nx171 ar0_m_Reg_3 nx219 mux21_ni
+        X_ix197 nx476 nx171 ar0_m_Reg_3 nx196 mux21_ni
+        X_ix260 nx545 nx314 qr0_m_Reg_3 nx259 mux21_ni
+        X_ix429 nx547 nx314 qr0_m_Reg_3 nx428 mux21_ni
+        X_ix270 nx545 nx324 qr0_m_Reg_2 nx269 mux21_ni
+        X_ix409 nx547 nx324 qr0_m_Reg_2 nx408 mux21_ni
+        X_ix280 nx545 nx334 qr0_m_Reg_1 nx279 mux21_ni
+        X_ix389 nx547 nx334 qr0_m_Reg_1 nx388 mux21_ni
+        X_ix290 nx545 nx344 qr0_m_Reg_0 nx289 mux21_ni
+        X_ix369 nx545 nx344 qr0_m_Reg_0 nx368 mux21_ni
+        X_ix300 nx434 nx354 m_QRegNeg nx299 mux21_ni
+        X_ix71 m_AddSubB_0 m_AddSubCtrl m_AddSubA_0 nx70 mux21_ni
+        X_cl0_reg_m_MSignal N$dummy_esc1[45] m_MRegCtrl cl0_NOT_clk cl0_nx275 dff
+        X_cl0_reg_m_AddSubSignal N$dummy_esc1[44] m_AddSubCtrl cl0_NOT_clk
++ cl0_nx285 dff
+        X_cl0_reg_m_ASignal_1 N$dummy_esc1[43] m_ARegCtrl_1 cl0_NOT_clk
++ cl0_nx265 dff
+        X_cl0_reg_m_ASignal_0 N$dummy_esc1[42] m_ARegCtrl_0 cl0_NOT_clk
++ cl0_nx255 dff
+        X_cl0_reg_m_QSignal_1 N$dummy_esc1[41] m_QRegCtrl_1 cl0_NOT_clk
++ cl0_nx245 dff
+        X_cl0_reg_m_QSignal_0 N$dummy_esc1[40] m_QRegCtrl_0 cl0_NOT_clk
++ cl0_nx235 dff
+        X_cl0_reg_m_Cnt_2 N$dummy_esc1[39] cl0_m_Cnt_2 cl0_nx414 cl0_nx175 dff
+        X_cl0_reg_m_Cnt_1 N$dummy_esc1[38] cl0_m_Cnt_1 cl0_nx414 cl0_nx165 dff
+        X_cl0_reg_m_Cnt_0 N$dummy_esc1[37] cl0_m_Cnt_0 cl0_nx414 cl0_nx155 dff
+        X_cl0_reg_m_NextState_2 N$dummy_esc1[36] cl0_m_NextState_2 cl0_nx414
++ cl0_nx185 dff
+        X_cl0_reg_m_Finished N$dummy_esc1[35] finished cl0_NOT_clk cl0_nx225 dff
+        X_reg_m_Result_7 N$dummy_esc1[34] result[7] clk m_AddSubA_3 dff
+        X_reg_m_Result_6 N$dummy_esc1[33] result[6] clk m_AddSubA_2 dff
+        X_reg_m_Result_5 N$dummy_esc1[32] result[5] clk m_AddSubA_1 dff
+        X_cl0_ix341 cl0_m_Cnt_2 cl0_nx148 cl0_nx321 cl0_nx340 aoi21
+        X_cl0_ix174 cl0_nx340 cl0_nx410 cl0_nx14 cl0_nx173 aoi21
+        X_cl0_ix322 cl0_m_Cnt_1 cl0_m_Cnt_0 cl0_m_Cnt_2 cl0_nx321 nor03_2x
+        X_cl0_ix176 cl0_nx14 cl0_m_Cnt_2 cl0_nx173 cl0_nx175 ao21
+        X_ix475 m_ARegCtrl_1 nx476 buf02
+        X_ix544 m_QRegCtrl_0 nx545 buf02
+        X_ix546 m_QRegCtrl_0 nx547 buf02
+        X_cl0_ix358 cl0_nx102 cl0_nx357 inv02
+        X_cl0_ix45 cl0_nx334 cl0_nx148 inv02
+        X_ix396 nx106 nx395 inv02
+        X_cl0_ix413 clk cl0_nx414 inv02
+        X_cl0_ix311 clk cl0_NOT_clk inv02
+        X_ix111 nx110 nx70 nx108 xor2
+        X_ix293 nx292 m_AddSubA_0 m_AddSubB_0 xor2
+        X_cl0_ix103 cl0_nx102 cl0_nx362 cl0_nx298 nand02_2x
+        X_ix109 nx108 m_AddSubA_1 nx106 xnor2
+.ends Multiplier
+
+*
+* Component pathname : /home/gota/EECS301/lab3/TopModel_Multiplier
+*
+.subckt TopModel_Multiplier  B0 B1 B2 B3 A0 A1 A2 A3 R0 R1 R2 R3 R4 R5 R6
++ R7 Clk Start Finished
+
+        X_MULTIPLIER1 B0 B1 B2 B3 A0 A1 A2 A3 R0 R1 R2 R3 R4 R5 R6 R7 Clk
++ Finished Start Multiplier
+.ends TopModel_Multiplier
+

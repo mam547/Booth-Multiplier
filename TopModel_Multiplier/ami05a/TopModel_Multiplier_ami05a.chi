@@ -1,0 +1,2539 @@
+  Run on Pandoras-Friend (Linux 5.13.0-30-generic)
+
+/mgc/anacad2009_2c/aol/bin/eldo_64.exe -i /home/gota/EECS301/lab3/TopModel_Multiplier/ami05a/TopModel_Multiplier_ami05a.cir -o /home/gota/EECS301/lab3/TopModel_Multiplier/ami05a/TopModel_Multiplier_ami05a.chi -nocou -gwl jwdb -wdb_folder -ezwave -outname TopModel_Multiplier_ami05a_02 
+
+
+
+***** PRE-PROCESSING ...
+
+1******* 3-Mar-22 *******  ELDO 2009.2c (64 bits)  (v7.2_4.1)  *******19:08:03******
+
+0* Component: /home/gota/EECS301/lab3/TopModel_Multiplier  Viewpoint: ami05a
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  ** including /home/gota/EECS301/lab3/TopModel_Multiplier/ami05a/TopModel_Multiplier_ami05a.spi
+    1  *
+    2  * .CONNECT statements
+    3  *
+    4  .CONNECT GND 0
+    5  
+    6  
+    7  * ELDO netlist generated with ICnet by 'gota' on Thu Mar  3 2022 at 19:08:02
+    8  
+    9  *
+   10  * Globals.
+   11  *
+   12  .GLOBAL GND VDD
+   13  
+   14  *
+   15  * Component pathname : $ADK/parts/buf02
+   16  *
+   17  .SUBCKT BUF02  A Y
+   18  
+   19          M_I$614 Y N$411 VDD VDD P L=0.6U W=5.4U
+   20          M_I$615 Y N$411 GND GND N L=0.6U W=3U
+   21          M_I$411 N$411 A VDD VDD P L=0.6U W=2.7U
+   22          M_I$412 N$411 A GND GND N L=0.6U W=1.5U
+   23  .ENDS BUF02
+   24  
+   25  *
+   26  * Component pathname : $ADK/parts/inv02
+   27  *
+   28  .SUBCKT INV02  A Y
+   29  
+   30          M_I$6 Y A VDD VDD P L=0.6U W=5.4U
+   31          M_I$5 Y A GND GND N L=0.6U W=3U
+   32  .ENDS INV02
+   33  
+   34  *
+   35  * Component pathname : $ADK/parts/xor2
+   36  *
+   37  .SUBCKT XOR2  Y A0 A1
+   38  
+   39          M_I$421 Y N$4 GND GND N L=0.6U W=1.5U
+   40          M_I$420 Y N$4 VDD VDD P L=0.6U W=2.7U
+   41          M_I$218 N$213 A1 GND GND N L=0.6U W=3U
+   42          M_I$217 N$212 A0 N$213 GND N L=0.6U W=3U
+   43          M_I$9 N$212 A1 VDD VDD P L=0.6U W=3.9U
+   44          M_I$8 N$212 A0 VDD VDD P L=0.6U W=3.9U
+   45          M_I$7 N$3 N$212 GND GND N L=0.6U W=3U
+   46          M_I$6 N$4 A1 N$3 GND N L=0.6U W=3U
+   47          M_I$5 N$4 A0 N$3 GND N L=0.6U W=3U
+   48          M_I$4 N$4 A1 N$1 VDD P L=0.6U W=7.8U
+   49          M_I$3 N$4 N$212 VDD VDD P L=0.6U W=3.9U
+   50          M_I$2 N$1 A0 VDD VDD P L=0.6U W=7.8U
+   51  .ENDS XOR2
+   52  
+   53  *
+   54  * Component pathname : $ADK/parts/nor02_2x
+   55  *
+   56  .SUBCKT NOR02_2X  A0 A1 Y
+   57  
+   58          M_I$5 Y A0 GND GND N L=0.6U W=3U
+   59          M_I$4 Y A1 GND GND N L=0.6U W=3U
+   60          M_I$3 Y A1 N$1 VDD P L=0.6U W=7.8U
+   61          M_I$2 N$1 A0 VDD VDD P L=0.6U W=7.8U
+   62  .ENDS NOR02_2X
+   63  
+   64  *
+   65  * Component pathname : $ADK/parts/nand02_2x
+   66  *
+   67  .SUBCKT NAND02_2X  Y A0 A1
+   68  
+   69          M_I$9 Y A1 VDD VDD P L=0.6U W=6U
+   70          M_I$8 Y A0 VDD VDD P L=0.6U W=6U
+   71          M_I$3 Y A0 N$5 GND N L=0.6U W=6U
+   72          M_I$2 N$5 A1 GND GND N L=0.6U W=6U
+   73  .ENDS NAND02_2X
+   74  
+   75  *
+   76  * Component pathname : $ADK/parts/xnor2
+   77  *
+   78  .SUBCKT XNOR2  Y A0 A1
+   79  
+   80          M_I$218 N$213 A1 GND GND N L=0.6U W=3U
+   81          M_I$217 N$212 A0 N$213 GND N L=0.6U W=3U
+   82          M_I$9 N$212 A1 VDD VDD P L=0.6U W=3.9U
+   83          M_I$8 N$212 A0 VDD VDD P L=0.6U W=3.9U
+   84          M_I$7 N$3 N$212 GND GND N L=0.6U W=3U
+   85          M_I$6 Y A1 N$3 GND N L=0.6U W=3U
+   86          M_I$5 Y A0 N$3 GND N L=0.6U W=3U
+   87          M_I$4 Y A1 N$1 VDD P L=0.6U W=7.8U
+   88          M_I$3 Y N$212 VDD VDD P L=0.6U W=3.9U
+   89          M_I$2 N$1 A0 VDD VDD P L=0.6U W=7.8U
+   90  .ENDS XNOR2
+   91  
+   92  *
+   93  * Component pathname : $ADK/parts/nor02ii
+   94  *
+   95  .SUBCKT NOR02II  A0 A1 Y
+   96  
+   97          MP1 N$208 A1 VDD VDD P L=0.6U W=2.7U
+   98          MN1 N$208 A1 GND GND N L=0.6U W=1.5U
+   99          MN4 Y A0 GND GND N L=0.6U W=1.5U
+  100          MN2 Y N$208 GND GND N L=0.6U W=1.5U
+  101          MP4 Y N$208 N$4 VDD P L=0.6U W=3.9U
+  102          MP2 N$4 A0 VDD VDD P L=0.6U W=3.9U
+  103  .ENDS NOR02II
+  104  
+  105  *
+  106  * Component pathname : $ADK/parts/aoi22
+  107  *
+  108  .SUBCKT AOI22  B1 A0 A1 B0 Y
+  109  
+  110          M_I$425 Y B0 N$9 GND N L=0.6U W=3U
+  111          M_I$426 Y B1 N$4 VDD P L=0.6U W=3.9U
+  112          M_I$12 N$8 A1 GND GND N L=0.6U W=3U
+  113          M_I$11 Y A0 N$8 GND N L=0.6U W=3U
+  114          M_I$7 Y B0 N$4 VDD P L=0.6U W=3.9U
+  115          M_I$6 N$4 A1 VDD VDD P L=0.6U W=3.9U
+  116          M_I$5 N$4 A0 VDD VDD P L=0.6U W=3.9U
+  117          M_I$13 N$9 B1 GND GND N L=0.6U W=3U
+  118  .ENDS AOI22
+  119  
+  120  *
+  121  * Component pathname : $ADK/parts/mux21
+  122  *
+  123  .SUBCKT MUX21  S0 A0 A1 Y
+  124  
+  125          M_I$5 Y S0 N$10 VDD P L=0.6U W=5.4U
+  126          M_I$13 N$6 A1 GND GND N L=0.6U W=3U
+  127          M_I$12 Y S0 N$6 GND N L=0.6U W=3U
+  128          M_I$17 Y N$7 N$5 VDD P L=0.6U W=5.4U
+  129          M_I$16 N$5 A1 VDD VDD P L=0.6U W=5.4U
+  130          M_I$7 N$4 A0 GND GND N L=0.6U W=3U
+  131          M_I$6 Y N$7 N$4 GND N L=0.6U W=3U
+  132          M_I$4 N$10 A0 VDD VDD P L=0.6U W=5.4U
+  133          M_I$3 N$7 S0 GND GND N L=0.6U W=1.5U
+  134          M_I$2 N$7 S0 VDD VDD P L=0.6U W=2.7U
+  135  .ENDS MUX21
+  136  
+  137  *
+  138  * Component pathname : $ADK/parts/mux21_ni
+  139  *
+  140  .SUBCKT MUX21_NI  S0 A0 A1 Y
+  141  
+  142          M_I$18 Y N$11 GND GND N L=0.6U W=1.5U
+  143          M_I$17 Y N$11 VDD VDD P L=0.6U W=2.7U
+  144          M_I$16 N$11 S0 N$7 VDD P L=0.6U W=5.4U
+  145          M_I$11 N$3 A1 GND GND N L=0.6U W=3U
+  146          M_I$10 N$11 S0 N$3 GND N L=0.6U W=3U
+  147          M_I$9 N$11 N$4 N$2 VDD P L=0.6U W=5.4U
+  148          M_I$8 N$2 A1 VDD VDD P L=0.6U W=5.4U
+  149          M_I$7 N$1 A0 GND GND N L=0.6U W=3U
+  150          M_I$6 N$11 N$4 N$1 GND N L=0.6U W=3U
+  151          M_I$4 N$7 A0 VDD VDD P L=0.6U W=5.4U
+  152          M_I$3 N$4 S0 GND GND N L=0.6U W=1.5U
+  153          M_I$2 N$4 S0 VDD VDD P L=0.6U W=2.7U
+  154  .ENDS MUX21_NI
+  155  
+  156  *
+  157  * Component pathname : $ADK/parts/dff
+  158  *
+  159  .SUBCKT DFF  QB Q CLK D
+  160  
+  161          M_I$441 N$847 BCLK- N$851 GND N L=0.6U W=4.5U
+  162          M_I$440 N$849 N$847 VDD VDD P L=0.6U W=1.5U
+  163          M_I$439 N$847 BCLK- N$848 VDD P L=0.6U W=1.5U
+  164          M_I$438 N$848 N$849 VDD VDD P L=0.6U W=1.5U
+  165          M_I$437 N$847 BCLK N$845 VDD P L=0.6U W=8.1U
+  166          M_I$436 N$845 D VDD VDD P L=0.6U W=8.1U
+  167          M_I$452 BCLK BCLK- GND GND N L=0.6U W=3U
+  168          M_I$673 Q QB GND GND N L=0.6U W=3U
+  169          M_I$672 Q QB VDD VDD P L=0.6U W=5.4U
+  170          M_I$669 QB N$1074 GND GND N L=0.6U W=3U
+  171          M_I$675 QB N$1074 VDD VDD P L=0.6U W=5.4U
+  172          M_I$668 N$1071 N$1074 GND GND N L=0.6U W=1.5U
+  173          M_I$667 N$1073 N$1071 GND GND N L=0.6U W=1.5U
+  174          M_I$666 N$1074 BCLK- N$1073 GND N L=0.6U W=1.5U
+  175          M_I$665 N$1072 N$847 GND GND N L=0.6U W=4.5U
+  176          M_I$664 N$1074 BCLK N$1072 GND N L=0.6U W=4.5U
+  177          M_I$663 N$1071 N$1074 VDD VDD P L=0.6U W=1.5U
+  178          M_I$662 N$1074 BCLK N$1070 VDD P L=0.6U W=1.5U
+  179          M_I$661 N$1070 N$1071 VDD VDD P L=0.6U W=1.5U
+  180          M_I$660 N$1074 BCLK- N$1069 VDD P L=0.6U W=8.1U
+  181          M_I$659 N$1069 N$847 VDD VDD P L=0.6U W=8.1U
+  182          M_I$449 BCLK- CLK GND GND N L=0.6U W=3U
+  183          M_I$448 BCLK- CLK VDD VDD P L=0.6U W=5.4U
+  184          M_I$453 BCLK BCLK- VDD VDD P L=0.6U W=5.4U
+  185          M_I$445 N$849 N$847 GND GND N L=0.6U W=1.5U
+  186          M_I$444 N$852 N$849 GND GND N L=0.6U W=1.5U
+  187          M_I$443 N$847 BCLK N$852 GND N L=0.6U W=1.5U
+  188          M_I$442 N$851 D GND GND N L=0.6U W=4.5U
+  189  .ENDS DFF
+  190  
+  191  *
+  192  * Component pathname : $ADK/parts/oai21
+  193  *
+  194  .SUBCKT OAI21  A0 A1 B0 Y
+  195  
+  196          M_I$5 N$7 B0 GND GND N L=0.6U W=3U
+  197          M_I$4 Y A1 N$7 GND N L=0.6U W=3U
+  198          M_I$3 Y A0 N$7 GND N L=0.6U W=3U
+  199          M_I$12 Y B0 VDD VDD P L=0.6U W=3.6U
+  200          M_I$2 Y A1 N$9 VDD P L=0.6U W=7.2U
+  201          M_I$1 N$9 A0 VDD VDD P L=0.6U W=7.2U
+  202  .ENDS OAI21
+  203  
+  204  *
+  205  * Component pathname : $ADK/parts/and02
+  206  *
+  207  .SUBCKT AND02  Y A0 A1
+  208  
+  209          M_I$674 Y N$5 VDD VDD P L=0.6U W=2.7U
+  210          M_I$675 Y N$5 GND GND N L=0.6U W=1.5U
+  211          M_I$472 N$5 A1 VDD VDD P L=0.6U W=3.6U
+  212          M_I$471 N$5 A0 VDD VDD P L=0.6U W=3.6U
+  213          M_I$4 N$5 A0 N$7 GND N L=0.6U W=3U
+  214          M_I$5 N$7 A1 GND GND N L=0.6U W=3U
+  215  .ENDS AND02
+  216  
+  217  *
+  218  * Component pathname : $ADK/parts/or02
+  219  *
+  220  .SUBCKT OR02  A0 A1 Y
+  221  
+  222          M_I$212 Y N$5 GND GND N L=0.6U W=1.5U
+  223          M_I$211 Y N$5 VDD VDD P L=0.6U W=2.7U
+  224          M_I$5 N$5 A0 GND GND N L=0.6U W=1.5U
+  225          M_I$4 N$5 A1 GND GND N L=0.6U W=1.5U
+  226          M_I$3 N$5 A1 N$1 VDD P L=0.6U W=3.9U
+  227          M_I$2 N$1 A0 VDD VDD P L=0.6U W=3.9U
+  228  .ENDS OR02
+  229  
+  230  *
+  231  * Component pathname : $ADK/parts/ao32
+  232  *
+  233  .SUBCKT AO32  Y A0 A1 A2 B0 B1
+  234  
+  235          M_I$222 Y N$214 GND GND N L=0.6U W=1.5U
+  236          M_I$221 Y N$214 VDD VDD P L=0.6U W=2.7U
+  237          M_I$12 N$6 B1 GND GND N L=0.6U W=3U
+  238          M_I$11 N$214 B0 N$6 GND N L=0.6U W=3U
+  239          M_I$10 N$5 A2 GND GND N L=0.6U W=4.5U
+  240          M_I$9 N$4 A1 N$5 GND N L=0.6U W=4.5U
+  241          M_I$8 N$214 A0 N$4 GND N L=0.6U W=4.5U
+  242          M_I$6 N$214 B0 N$11 VDD P L=0.6U W=3.9U
+  243          M_I$5 N$214 B1 N$11 VDD P L=0.6U W=3.9U
+  244          M_I$4 N$11 A0 VDD VDD P L=0.6U W=3.9U
+  245          M_I$3 N$11 A1 VDD VDD P L=0.6U W=3.9U
+  246          M_I$2 N$11 A2 VDD VDD P L=0.6U W=3.9U
+  247  .ENDS AO32
+  248  
+  249  *
+  250  * Component pathname : $ADK/parts/aoi21
+  251  *
+  252  .SUBCKT AOI21  A0 A1 B0 Y
+  253  
+  254          M_I$12 N$8 A1 GND GND N L=0.6U W=3U
+  255          M_I$11 Y A0 N$8 GND N L=0.6U W=3U
+  256          M_I$7 Y B0 N$4 VDD P L=0.6U W=3.9U
+  257          M_I$6 N$4 A1 VDD VDD P L=0.6U W=3.9U
+  258          M_I$5 N$4 A0 VDD VDD P L=0.6U W=3.9U
+  259          M_I$13 Y B0 GND GND N L=0.6U W=1.5U
+  260  .ENDS AOI21
+  261  
+  262  *
+  263  * Component pathname : $ADK/parts/nor03
+  264  *
+  265  .SUBCKT NOR03  A2 A0 A1 Y
+  266  
+  267          M_I$213 Y A0 GND GND N L=0.6U W=1.8U
+  268          M_I$211 Y A2 N$211 VDD P L=0.6U W=8.1U
+  269          M_I$5 Y A1 GND GND N L=0.6U W=1.8U
+  270          M_I$4 Y A2 GND GND N L=0.6U W=1.8U
+  271          M_I$3 N$211 A1 N$1 VDD P L=0.6U W=8.1U
+  272          M_I$2 N$1 A0 VDD VDD P L=0.6U W=8.1U
+  273  .ENDS NOR03
+  274  
+  275  *
+  276  * Component pathname : $ADK/parts/nor03_2x
+  277  *
+  278  .SUBCKT NOR03_2X  A1 A0 A2 Y
+  279  
+  280          M_I$12 Y A0 GND GND N L=0.6U W=3.3U
+  281          M_I$10 Y A2 N$3 VDD P L=0.6U W=12U
+  282          M_I$5 Y A1 GND GND N L=0.6U W=3.3U
+  283          M_I$4 Y A2 GND GND N L=0.6U W=3.3U
+  284          M_I$3 N$3 A1 N$1 VDD P L=0.6U W=12U
+  285          M_I$2 N$1 A0 VDD VDD P L=0.6U W=12U
+  286  .ENDS NOR03_2X
+  287  
+  288  *
+  289  * Component pathname : $ADK/parts/aoi221
+  290  *
+  291  .SUBCKT AOI221  A0 A1 B0 B1 C0 Y
+  292  
+  293          M_I$13 Y C0 GND GND N L=0.6U W=3U
+  294          M_I$12 N$8 B1 GND GND N L=0.6U W=4.5U
+  295          M_I$11 Y B0 N$8 GND N L=0.6U W=4.5U
+  296          M_I$9 N$6 A1 GND GND N L=0.6U W=4.5U
+  297          M_I$8 Y A0 N$6 GND N L=0.6U W=4.5U
+  298          M_I$7 Y C0 N$4 VDD P L=0.6U W=7.2U
+  299          M_I$6 N$4 B0 N$14 VDD P L=0.6U W=7.2U
+  300          M_I$5 N$4 B1 N$14 VDD P L=0.6U W=7.2U
+  301          M_I$3 N$14 A1 VDD VDD P L=0.6U W=7.2U
+  302          M_I$2 N$14 A0 VDD VDD P L=0.6U W=7.2U
+  303  .ENDS AOI221
+  304  
+  305  *
+  306  * Component pathname : $ADK/parts/ao21
+  307  *
+  308  .SUBCKT AO21  A1 A0 B0 Y
+  309  
+  310          M_I$14 Y N$3 VDD VDD P L=0.6U W=2.7U
+  311          M_I$13 Y N$3 GND GND N L=0.6U W=1.5U
+  312          M_I$12 N$2 A1 GND GND N L=0.6U W=3U
+  313          M_I$11 N$3 A0 N$2 GND N L=0.6U W=3U
+  314          M_I$7 N$3 B0 N$1 VDD P L=0.6U W=3.9U
+  315          M_I$6 N$1 A1 VDD VDD P L=0.6U W=3.9U
+  316          M_I$5 N$1 A0 VDD VDD P L=0.6U W=3.9U
+  317          M_I$4 N$3 B0 GND GND N L=0.6U W=1.5U
+  318  .ENDS AO21
+  319  
+  320  *
+  321  * Component pathname : $ADK/parts/nor04
+  322  *
+  323  .SUBCKT NOR04  A3 A2 A0 A1 Y
+  324  
+  325          M_I$415 Y A3 GND GND N L=0.6U W=3U
+  326          M_I$416 Y A3 N$418 VDD P L=0.6U W=10.8U
+  327          M_I$213 Y A0 GND GND N L=0.6U W=3U
+  328          M_I$211 N$418 A2 N$211 VDD P L=0.6U W=10.8U
+  329          M_I$5 Y A1 GND GND N L=0.6U W=3U
+  330          M_I$4 Y A2 GND GND N L=0.6U W=3U
+  331          M_I$3 N$211 A1 N$1 VDD P L=0.6U W=10.8U
+  332          M_I$2 N$1 A0 VDD VDD P L=0.6U W=10.8U
+  333  .ENDS NOR04
+  334  
+  335  *
+  336  * Component pathname : $ADK/parts/ao22
+  337  *
+  338  .SUBCKT AO22  A1 A0 B0 Y B1
+  339  
+  340          M_I$16 Y N$215 VDD VDD P L=0.6U W=2.7U
+  341          M_I$18 Y N$215 GND GND N L=0.6U W=1.5U
+  342          M_I$14 N$215 B0 N$2 GND N L=0.6U W=3U
+  343          M_I$13 N$215 B1 N$6 VDD P L=0.6U W=3.9U
+  344          M_I$12 N$1 A1 GND GND N L=0.6U W=3U
+  345          M_I$11 N$215 A0 N$1 GND N L=0.6U W=3U
+  346          M_I$7 N$215 B0 N$6 VDD P L=0.6U W=3.9U
+  347          M_I$6 N$6 A1 VDD VDD P L=0.6U W=3.9U
+  348          M_I$5 N$6 A0 VDD VDD P L=0.6U W=3.9U
+  349          M_I$4 N$2 B1 GND GND N L=0.6U W=3U
+  350  .ENDS AO22
+  351  
+  352  *
+  353  * Component pathname : /home/gota/EECS301/lab3/Multiplier_V/Multiplier_S/Multiplier
+  354  *
+  355  .SUBCKT MULTIPLIER  MULTIPLICAND[0] MULTIPLICAND[1] MULTIPLICAND[2] MULTIPLICAND[3]
+  356  + MULTIPLIER[0] MULTIPLIER[1] MULTIPLIER[2] MULTIPLIER[3] RESULT[0] RESULT[1]
+  357  + RESULT[2] RESULT[3] RESULT[4] RESULT[5] RESULT[6] RESULT[7] CLK FINISHED
+  358  + START
+  359  
+  360          X_CL0_IX417 CL0_NX371 CL0_NX418 BUF02
+  361          X_CL0_IX415 CL0_NX313 CL0_NX416 BUF02
+  362          X_CL0_IX409 CL0_NX298 CL0_NX410 INV02
+  363          X_IX548 CL0_NX298 NX549 INV02
+  364          X_CL0_IX161 CL0_NX392 CL0_NX160 INV02
+  365          X_CL0_IX15 CL0_NX362 CL0_NX14 INV02
+  366          X_CL0_IX411 CL0_NX367 CL0_NX412 INV02
+  367          X_CL0_IX299 CL0_NX145 CL0_NX298 INV02
+  368          X_CL0_IX63 CL0_NX321 CL0_NX147 INV02
+  369          X_CL0_IX352 CL0_NX156 M_QREGOUT_0 CL0_M_QNEG XOR2
+  370          X_CL0_IX335 CL0_M_CNT_0 CL0_M_CNT_1 CL0_NX334 NOR02_2X
+  371          X_CL0_IX191 CL0_NX349 CL0_NX367 CL0_NX304 NOR02_2X
+  372          X_CL0_IX393 CL0_NX392 CL0_NX418 CL0_NX156 NAND02_2X
+  373          X_IX169 NX168 NX369 NX166 XNOR2
+  374          X_IX167 NX166 M_ADDSUBA_2 NX164 XNOR2
+  375          X_IX165 NX164 M_ADDSUBCTRL M_ADDSUBB_2 XNOR2
+  376          X_IX225 NX224 M_ADDSUBCTRL M_ADDSUBB_3 XNOR2
+  377          X_IX227 NX226 M_ADDSUBA_3 NX224 XNOR2
+  378          X_IX229 NX228 NX358 NX226 XNOR2
+  379          X_CL0_IX356 CL0_NX416 CL0_NX102 CL0_NX355 NOR02II
+  380          X_CL0_IX101 START CL0_M_NEXTSTATE_2 CL0_NX145 NOR02II
+  381          X_CL0_IX370 CL0_NX319 CL0_NX416 CL0_NX321 CL0_NX418 CL0_NX369 AOI22
+  382          X_CL0_IX83 NX549 CL0_NX345 CL0_NX362 CL0_NX82 MUX21
+  383          X_CL0_IX216 CL0_NX424 CL0_NX319 CL0_NX317 CL0_NX215 MUX21
+  384          X_IX359 NX166 NX164 NX369 NX358 MUX21_NI
+  385          X_CL0_IX236 CL0_NX426 CL0_NX14 NX545 CL0_NX235 MUX21_NI
+  386          X_CL0_IX256 CL0_NX426 CL0_NX82 M_AREGCTRL_0 CL0_NX255 MUX21_NI
+  387          X_CL0_IX226 CL0_NX424 CL0_NX164 FINISHED CL0_NX225 MUX21_NI
+  388          X_CL0_IX196 CL0_NX424 CL0_NX116 CL0_M_NEXTSTATE_0 CL0_NX195 MUX21_NI
+  389          X_CL0_REG_M_QNEG CL0_NX359 CL0_M_QNEG CL0_NX414 CL0_NX205 DFF
+  390          X_CL0_REG_M_NEXTSTATE_1 CL0_NX317 CL0_M_NEXTSTATE_1 CL0_NX414 CL0_NX215 DFF
+  391          X_CL0_REG_M_NEXTSTATE_0 CL0_NX306 CL0_M_NEXTSTATE_0 CL0_NX414 CL0_NX195 DFF
+  392          X_CL0_IX366 NX549 CL0_NX412 CL0_NX349 CL0_NX365 OAI21
+  393          X_CL0_IX363 CL0_NX362 CL0_NX349 CL0_NX367 AND02
+  394          X_CL0_IX185 START CL0_NX317 CL0_NX367 OR02
+  395          X_CL0_IX127 START CL0_NX306 CL0_NX349 OR02
+  396          X_CL0_IX206 CL0_NX205 M_QREGNEG CL0_NX410 CL0_NX416 CL0_M_QNEG CL0_NX355 AO32
+  397          X_CL0_IX286 CL0_NX285 M_QREGOUT_0 CL0_NX359 CL0_NX418 M_ADDSUBCTRL
+  398  + CL0_NX392 AO32
+  399          X_CL0_IX333 CL0_M_CNT_1 CL0_M_CNT_0 CL0_NX334 CL0_NX332 AOI21
+  400          X_CL0_IX184 CL0_NX365 CL0_NX369 CL0_NX424 CL0_NX183 AOI21
+  401          X_CL0_IX264 CL0_NX349 CL0_NX298 CL0_NX424 CL0_NX263 AOI21
+  402          X_CL0_IX154 CL0_NX14 CL0_M_CNT_0 CL0_NX298 CL0_NX153 NOR03
+  403          X_CL0_IX164 CL0_NX14 CL0_NX298 CL0_NX332 CL0_NX163 NOR03
+  404          X_CL0_IX346 CL0_M_NEXTSTATE_0 START CL0_NX317 CL0_NX345 NOR03_2X
+  405          X_CL0_IX320 CL0_NX416 CL0_NX321 CL0_NX410 CL0_NX345 CL0_NX160 CL0_NX319 AOI221
+  406          X_CL0_IX156 CL0_NX14 CL0_M_CNT_0 CL0_NX153 CL0_NX155 AO21
+  407          X_CL0_IX166 CL0_NX14 CL0_M_CNT_1 CL0_NX163 CL0_NX165 AO21
+  408          X_CL0_IX186 CL0_NX424 CL0_M_NEXTSTATE_2 CL0_NX183 CL0_NX185 AO21
+  409          X_CL0_IX117 CL0_NX147 CL0_NX416 CL0_NX362 CL0_NX116 AO21
+  410          X_CL0_IX266 CL0_NX424 M_AREGCTRL_1 CL0_NX263 CL0_NX265 AO21
+  411          X_CL0_IX165 CL0_NX317 CL0_M_NEXTSTATE_0 CL0_NX298 START CL0_NX164 NOR04
+  412          X_CL0_IX372 CL0_NX306 CL0_M_NEXTSTATE_2 START CL0_M_NEXTSTATE_1
+  413  + CL0_NX371 NOR04
+  414          X_CL0_IX314 CL0_NX306 CL0_NX298 START CL0_M_NEXTSTATE_1 CL0_NX313 NOR04
+  415          X_CL0_IX423 CL0_NX304 CL0_NX424 BUF02
+  416          X_CL0_IX425 CL0_NX304 CL0_NX426 BUF02
+  417          X_IX477 M_AREGCTRL_1 NX478 BUF02
+  418          X_IX479 M_MREGCTRL NX480 BUF02
+  419          X_IX481 M_MREGCTRL NX482 BUF02
+  420          X_IX37 M_AREGCTRL_0 NX478 NX36 NOR02_2X
+  421          X_IX31 NX30 NX476 M_AREGCTRL_0 NAND02_2X
+  422          X_IX336 NX36 NX476 AR0_M_REG_1 M_ADDSUBOUT_0 NX335 AOI22
+  423          X_IX350 NX36 NX476 AR0_M_REG_3 M_ADDSUBOUT_2 NX349 AOI22
+  424          X_IX342 NX36 NX476 AR0_M_REG_2 M_ADDSUBOUT_1 NX341 AOI22
+  425          X_IX283 NX30 NX333 NX335 NX282 MUX21
+  426          X_IX250 NX30 NX333 NX335 NX249 MUX21
+  427          X_IX79 NX30 NX339 NX341 NX78 MUX21
+  428          X_IX240 NX30 NX339 NX341 NX239 MUX21
+  429          X_IX140 NX30 NX347 NX349 NX136 MUX21
+  430          X_IX230 NX30 NX347 NX349 NX229 MUX21
+  431          X_IX305 AR0_M_REG_0 NX476 M_ADDSUBOUT_0 NX304 NX36 AO22
+  432          X_IX180 NX480 MR0_M_REG_0 MULTIPLICAND[0] NX179 MUX21_NI
+  433          X_IX53 NX480 MR0_M_REG_0 MULTIPLICAND[0] NX52 MUX21_NI
+  434          X_IX190 NX480 MR0_M_REG_1 MULTIPLICAND[1] NX189 MUX21_NI
+  435          X_IX99 NX480 MR0_M_REG_1 MULTIPLICAND[1] NX98 MUX21_NI
+  436          X_IX200 NX480 MR0_M_REG_2 MULTIPLICAND[2] NX199 MUX21_NI
+  437          X_IX157 NX480 MR0_M_REG_2 MULTIPLICAND[2] NX156 MUX21_NI
+  438          X_IX210 NX480 MR0_M_REG_3 MULTIPLICAND[3] NX209 MUX21_NI
+  439          X_IX217 NX482 MR0_M_REG_3 MULTIPLICAND[3] NX216 MUX21_NI
+  440          X_IX345 M_QREGCTRL_1 MULTIPLIER[0] QR0_M_REG_1 NX344 MUX21_NI
+  441          X_IX355 M_QREGCTRL_1 MULTIPLIER[0] QR0_M_REG_0 NX354 MUX21_NI
+  442          X_IX335 M_QREGCTRL_1 MULTIPLIER[1] QR0_M_REG_2 NX334 MUX21_NI
+  443          X_IX325 M_QREGCTRL_1 MULTIPLIER[2] QR0_M_REG_3 NX324 MUX21_NI
+  444          X_IX315 M_QREGCTRL_1 MULTIPLIER[3] M_QREGCARRY NX314 MUX21_NI
+  445          X_AR0_REG_M_REG_0 NX333 AR0_M_REG_0 CLK NX249 DFF
+  446          X_AR0_REG_M_REG_1 NX339 AR0_M_REG_1 CLK NX239 DFF
+  447          X_AR0_REG_M_REG_2 NX347 AR0_M_REG_2 CLK NX229 DFF
+  448          X_REG_M_RESULT_4 N$DUMMY_ESC1[31] RESULT[4] CLK M_ADDSUBA_0 DFF
+  449          X_QR0_REG_M_O_3 N$DUMMY_ESC1[30] M_QREGOUT_3 CLK NX428 DFF
+  450          X_REG_M_RESULT_3 N$DUMMY_ESC1[29] RESULT[3] CLK M_QREGOUT_3 DFF
+  451          X_QR0_REG_M_O_2 N$DUMMY_ESC1[28] M_QREGOUT_2 CLK NX408 DFF
+  452          X_REG_M_RESULT_2 N$DUMMY_ESC1[27] RESULT[2] CLK M_QREGOUT_2 DFF
+  453          X_QR0_REG_M_O_1 N$DUMMY_ESC1[26] M_QREGOUT_1 CLK NX388 DFF
+  454          X_REG_M_RESULT_1 N$DUMMY_ESC1[25] RESULT[1] CLK M_QREGOUT_1 DFF
+  455          X_REG_M_RESULT_0 N$DUMMY_ESC1[24] RESULT[0] CLK M_QREGOUT_0 DFF
+  456          X_QR0_REG_M_O_0 N$DUMMY_ESC1[23] M_QREGOUT_0 CLK NX368 DFF
+  457          X_AS0_REG_M_O_0 N$DUMMY_ESC1[22] M_ADDSUBOUT_0 CLK NX292 DFF
+  458          X_AS0_REG_M_O_1 N$DUMMY_ESC1[21] M_ADDSUBOUT_1 CLK NX110 DFF
+  459          X_AS0_REG_M_O_2 N$DUMMY_ESC1[20] M_ADDSUBOUT_2 CLK NX168 DFF
+  460          X_MR0_REG_M_REG_3 N$DUMMY_ESC1[19] MR0_M_REG_3 CLK NX209 DFF
+  461          X_MR0_REG_M_O_3 N$DUMMY_ESC1[18] M_ADDSUBB_3 CLK NX216 DFF
+  462          X_AR0_REG_M_O_3 N$DUMMY_ESC1[17] M_ADDSUBA_3 CLK NX196 DFF
+  463          X_AR0_REG_M_O_2 N$DUMMY_ESC1[16] M_ADDSUBA_2 CLK NX136 DFF
+  464          X_MR0_REG_M_REG_1 N$DUMMY_ESC1[15] MR0_M_REG_1 CLK NX189 DFF
+  465          X_MR0_REG_M_O_1 N$DUMMY_ESC1[14] M_ADDSUBB_1 CLK NX98 DFF
+  466          X_AR0_REG_M_O_1 N$DUMMY_ESC1[13] M_ADDSUBA_1 CLK NX78 DFF
+  467          X_MR0_REG_M_REG_0 N$DUMMY_ESC1[12] MR0_M_REG_0 CLK NX179 DFF
+  468          X_MR0_REG_M_O_0 N$DUMMY_ESC1[11] M_ADDSUBB_0 CLK NX52 DFF
+  469          X_AR0_REG_M_O_0 N$DUMMY_ESC1[10] M_ADDSUBA_0 CLK NX282 DFF
+  470          X_MR0_REG_M_REG_2 N$DUMMY_ESC1[9] MR0_M_REG_2 CLK NX199 DFF
+  471          X_MR0_REG_M_O_2 N$DUMMY_ESC1[8] M_ADDSUBB_2 CLK NX156 DFF
+  472          X_AS0_REG_M_O_3 N$DUMMY_ESC1[7] M_ADDSUBOUT_3 CLK NX228 DFF
+  473          X_AR0_REG_M_REG_3 N$DUMMY_ESC1[6] AR0_M_REG_3 CLK NX219 DFF
+  474          X_AR0_REG_M_SHIFTBIT N$DUMMY_ESC1[5] M_QREGCARRY CLK NX304 DFF
+  475          X_QR0_REG_M_REG_3 N$DUMMY_ESC1[4] QR0_M_REG_3 CLK NX259 DFF
+  476          X_QR0_REG_M_REG_2 N$DUMMY_ESC1[3] QR0_M_REG_2 CLK NX269 DFF
+  477          X_QR0_REG_M_REG_1 N$DUMMY_ESC1[2] QR0_M_REG_1 CLK NX279 DFF
+  478          X_QR0_REG_M_REG_0 N$DUMMY_ESC1[1] QR0_M_REG_0 CLK NX289 DFF
+  479          X_QR0_REG_M_SHIFTBIT N$DUMMY_ESC1[0] M_QREGNEG CLK NX299 DFF
+  480          X_IX107 NX106 M_ADDSUBCTRL M_ADDSUBB_1 XNOR2
+  481          X_IX435 M_QREGCTRL_1 NX545 NX434 NOR02II
+  482          X_IX239 M_AREGCTRL_0 M_ADDSUBOUT_3 NX171 NOR02II
+  483          X_IX370 M_ADDSUBA_1 NX70 NX108 NX395 NX369 AOI22
+  484          X_CL0_IX276 CL0_NX426 CL0_NX357 M_MREGCTRL CL0_NX275 MUX21_NI
+  485          X_CL0_IX246 CL0_NX426 CL0_NX102 M_QREGCTRL_1 CL0_NX245 MUX21_NI
+  486          X_IX220 NX476 NX171 AR0_M_REG_3 NX219 MUX21_NI
+  487          X_IX197 NX476 NX171 AR0_M_REG_3 NX196 MUX21_NI
+  488          X_IX260 NX545 NX314 QR0_M_REG_3 NX259 MUX21_NI
+  489          X_IX429 NX547 NX314 QR0_M_REG_3 NX428 MUX21_NI
+  490          X_IX270 NX545 NX324 QR0_M_REG_2 NX269 MUX21_NI
+  491          X_IX409 NX547 NX324 QR0_M_REG_2 NX408 MUX21_NI
+  492          X_IX280 NX545 NX334 QR0_M_REG_1 NX279 MUX21_NI
+  493          X_IX389 NX547 NX334 QR0_M_REG_1 NX388 MUX21_NI
+  494          X_IX290 NX545 NX344 QR0_M_REG_0 NX289 MUX21_NI
+  495          X_IX369 NX545 NX344 QR0_M_REG_0 NX368 MUX21_NI
+  496          X_IX300 NX434 NX354 M_QREGNEG NX299 MUX21_NI
+  497          X_IX71 M_ADDSUBB_0 M_ADDSUBCTRL M_ADDSUBA_0 NX70 MUX21_NI
+  498          X_CL0_REG_M_MSIGNAL N$DUMMY_ESC1[45] M_MREGCTRL CL0_NOT_CLK CL0_NX275 DFF
+  499          X_CL0_REG_M_ADDSUBSIGNAL N$DUMMY_ESC1[44] M_ADDSUBCTRL CL0_NOT_CLK
+  500  + CL0_NX285 DFF
+  501          X_CL0_REG_M_ASIGNAL_1 N$DUMMY_ESC1[43] M_AREGCTRL_1 CL0_NOT_CLK
+  502  + CL0_NX265 DFF
+  503          X_CL0_REG_M_ASIGNAL_0 N$DUMMY_ESC1[42] M_AREGCTRL_0 CL0_NOT_CLK
+  504  + CL0_NX255 DFF
+  505          X_CL0_REG_M_QSIGNAL_1 N$DUMMY_ESC1[41] M_QREGCTRL_1 CL0_NOT_CLK
+  506  + CL0_NX245 DFF
+  507          X_CL0_REG_M_QSIGNAL_0 N$DUMMY_ESC1[40] M_QREGCTRL_0 CL0_NOT_CLK
+  508  + CL0_NX235 DFF
+  509          X_CL0_REG_M_CNT_2 N$DUMMY_ESC1[39] CL0_M_CNT_2 CL0_NX414 CL0_NX175 DFF
+  510          X_CL0_REG_M_CNT_1 N$DUMMY_ESC1[38] CL0_M_CNT_1 CL0_NX414 CL0_NX165 DFF
+  511          X_CL0_REG_M_CNT_0 N$DUMMY_ESC1[37] CL0_M_CNT_0 CL0_NX414 CL0_NX155 DFF
+  512          X_CL0_REG_M_NEXTSTATE_2 N$DUMMY_ESC1[36] CL0_M_NEXTSTATE_2 CL0_NX414
+  513  + CL0_NX185 DFF
+  514          X_CL0_REG_M_FINISHED N$DUMMY_ESC1[35] FINISHED CL0_NOT_CLK CL0_NX225 DFF
+  515          X_REG_M_RESULT_7 N$DUMMY_ESC1[34] RESULT[7] CLK M_ADDSUBA_3 DFF
+  516          X_REG_M_RESULT_6 N$DUMMY_ESC1[33] RESULT[6] CLK M_ADDSUBA_2 DFF
+  517          X_REG_M_RESULT_5 N$DUMMY_ESC1[32] RESULT[5] CLK M_ADDSUBA_1 DFF
+  518          X_CL0_IX341 CL0_M_CNT_2 CL0_NX148 CL0_NX321 CL0_NX340 AOI21
+  519          X_CL0_IX174 CL0_NX340 CL0_NX410 CL0_NX14 CL0_NX173 AOI21
+  520          X_CL0_IX322 CL0_M_CNT_1 CL0_M_CNT_0 CL0_M_CNT_2 CL0_NX321 NOR03_2X
+  521          X_CL0_IX176 CL0_NX14 CL0_M_CNT_2 CL0_NX173 CL0_NX175 AO21
+  522          X_IX475 M_AREGCTRL_1 NX476 BUF02
+  523          X_IX544 M_QREGCTRL_0 NX545 BUF02
+  524          X_IX546 M_QREGCTRL_0 NX547 BUF02
+  525          X_CL0_IX358 CL0_NX102 CL0_NX357 INV02
+  526          X_CL0_IX45 CL0_NX334 CL0_NX148 INV02
+  527          X_IX396 NX106 NX395 INV02
+  528          X_CL0_IX413 CLK CL0_NX414 INV02
+  529          X_CL0_IX311 CLK CL0_NOT_CLK INV02
+  530          X_IX111 NX110 NX70 NX108 XOR2
+  531          X_IX293 NX292 M_ADDSUBA_0 M_ADDSUBB_0 XOR2
+  532          X_CL0_IX103 CL0_NX102 CL0_NX362 CL0_NX298 NAND02_2X
+  533          X_IX109 NX108 M_ADDSUBA_1 NX106 XNOR2
+  534  .ENDS MULTIPLIER
+  535  
+  536  *
+  537  * MAIN CELL: Component pathname : /home/gota/EECS301/lab3/TopModel_Multiplier
+  538  *
+  539          X_MULTIPLIER1 B0 B1 B2 B3 A0 A1 A2 A3 R0 R1 R2 R3 R4 R5 R6 R7 CLK
+  540  + FINISHED START MULTIPLIER
+  541  *
+  542  *end
+    2  
+    3  ** including /mgc/adk3_1/technology/ic/models/VDD_5.mod
+    1  Vgdmodel GND 0   DC 0.0v
+    2  Vddmodel VDD GND DC 5.0v
+    3  
+    3  
+    4  ** including /mgc/adk3_1/technology/ic/models/ami05.mod
+    1  * DATE: Jan 25/99
+    2  * LOT: n8bn                  WAF: 03
+    3  * Temperature_parameters=Default
+    4  * ***temp fix*** .lib NOM
+    5  .MODEL NOTCHEDROW C
+    6  .MODEL HR R
+    7  .MODEL N NMOS (                                LEVEL   = 53
+    8  +VERSION = 3.1            TNOM    = 27             TOX     = 1.41E-8
+    9  +XJ      = 1.5E-7         NCH     = 1.7E17         VTH0    = 0.7086
+   10  +K1      = 0.8354582      K2      = -0.088431      K3      = 41.4403818
+   11  +K3B     = -14            W0      = 6.480766E-7    NLX     = 1E-10
+   12  +DVT0W   = 0              DVT1W   = 5.3E6          DVT2W   = -0.032
+   13  +DVT0    = 3.6139113      DVT1    = 0.3795745      DVT2    = -0.1399976
+   14  +U0      = 533.6953445    UA      = 7.558023E-10   UB      = 1.181167E-18
+   15  +UC      = 2.582756E-11   VSAT    = 1.300981E5     A0      = 0.5292985
+   16  +AGS     = 0.1463715      B0      = 1.283336E-6    B1      = 1.408099E-6
+   17  +KETA    = -0.0173166     A1      = 0              A2      = 1
+   18  +RDSW    = 2.268366E3     PRWG    = -1E-3          PRWB    = 6.320549E-5
+   19  +WR      = 1              WINT    = 2.043512E-7    LINT    = 3.034496E-8
+   20  +XL      = 0              XW      = 0              DWG     = -1.446149E-8
+   21  +DWB     = 2.077539E-8    VOFF    = -0.1137226     NFACTOR = 1.2880596
+   22  +CIT     = 0              CDSC    = 1.506004E-4    CDSCD   = 0
+   23  +CDSCB   = 0              ETA0    = 3.815372E-4    ETAB    = -1.029178E-3
+   24  +DSUB    = 2.173055E-4    PCLM    = 0.6171774      PDIBLC1 = 0.185986
+   25  +PDIBLC2 = 3.473187E-3    PDIBLCB = -1E-3          DROUT   = 0.4037723
+   26  +PSCBE1  = 5.998012E9     PSCBE2  = 3.788068E-8    PVAG    = 0.012927
+   27  +DELTA   = 0.01           MOBMOD  = 1              PRT     = 0
+   28  +UTE     = -1.5           KT1     = -0.11          KT1L    = 0
+   29  +KT2     = 0.022          UA1     = 4.31E-9        UB1     = -7.61E-18
+   30  +UC1     = -5.6E-11       AT      = 3.3E4          WL      = 0
+   31  +WLN     = 1              WW      = 0              WWN     = 1
+   32  +WWL     = 0              LL      = 0              LLN     = 1
+   33  +LW      = 0              LWN     = 1              LWL     = 0
+   34  +CAPMOD  = 2              XPART   = 0.4            CGDO    = 1.99E-10
+   35  +CGSO    = 1.99E-10       CGBO    = 0              CJ      = 4.233802E-4
+   36  +PB      = 0.9899238      MJ      = 0.4495859      CJSW    = 3.825632E-10
+   37  +PBSW    = 0.1082556      MJSW    = 0.1083618      PVTH0   = 0.0212852
+   38  +PRDSW   = -16.1546703    PK2     = 0.0253069      WKETA   = 0.0188633
+   39  +LKETA   = 0.0204965       )
+   40  *
+   41  .MODEL P PMOS (                                LEVEL   = 53
+   42  +VERSION = 3.1            TNOM    = 27             TOX     = 1.41E-8
+   43  +XJ      = 1.5E-7         NCH     = 1.7E17         VTH0    = -0.9179952
+   44  +K1      = 0.5575604      K2      = 0.010265       K3      = 14.0655075
+   45  +K3B     = -2.3032921     W0      = 1.147829E-6    NLX     = 1.114768E-10
+   46  +DVT0W   = 0              DVT1W   = 5.3E6          DVT2W   = -0.032
+   47  +DVT0    = 2.2896412      DVT1    = 0.5213085      DVT2    = -0.1337987
+   48  +U0      = 202.4540953    UA      = 2.290194E-9    UB      = 9.779742E-19
+   49  +UC      = -3.69771E-11   VSAT    = 1.307891E5     A0      = 0.8356881
+   50  +AGS     = 0.1568774      B0      = 2.365956E-6    B1      = 5E-6
+   51  +KETA    = -5.769328E-3   A1      = 0              A2      = 1
+   52  +RDSW    = 2.746814E3     PRWG    = 2.34865E-3     PRWB    = 0.0172298
+   53  +WR      = 1              WINT    = 2.586255E-7    LINT    = 7.205014E-8
+   54  +XL      = 0              XW      = 0              DWG     = -2.133054E-8
+   55  +DWB     = 9.857534E-9    VOFF    = -0.0837499     NFACTOR = 1.2415529
+   56  +CIT     = 0              CDSC    = 4.363744E-4    CDSCD   = 0
+   57  +CDSCB   = 0              ETA0    = 0.11276        ETAB    = -2.9484E-3
+   58  +DSUB    = 0.3389402      PCLM    = 4.9847806      PDIBLC1 = 2.481735E-5
+   59  +PDIBLC2 = 0.01           PDIBLCB = 0              DROUT   = 0.9975107
+   60  +PSCBE1  = 3.497872E9     PSCBE2  = 4.974352E-9    PVAG    = 10.9914549
+   61  +DELTA   = 0.01           MOBMOD  = 1              PRT     = 0
+   62  +UTE     = -1.5           KT1     = -0.11          KT1L    = 0
+   63  +KT2     = 0.022          UA1     = 4.31E-9        UB1     = -7.61E-18
+   64  +UC1     = -5.6E-11       AT      = 3.3E4          WL      = 0
+   65  +WLN     = 1              WW      = 0              WWN     = 1
+   66  +WWL     = 0              LL      = 0              LLN     = 1
+   67  +LW      = 0              LWN     = 1              LWL     = 0
+   68  +CAPMOD  = 2              XPART   = 0.4            CGDO    = 2.4E-10
+   69  +CGSO    = 2.4E-10        CGBO    = 0              CJ      = 7.273568E-4
+   70  +PB      = 0.9665597      MJ      = 0.4959837      CJSW    = 3.114708E-10
+   71  +PBSW    = 0.99           MJSW    = 0.2653654      PVTH0   = 9.420541E-3
+   72  +PRDSW   = -231.2571566   PK2     = 1.396684E-3    WKETA   = 1.862966E-3
+   73  +LKETA   = 5.728589E-3     )
+   74  * ***temp fix*** .ENDL
+   75  *END
+    4  
+    5  .PROBE TRAN V(CLK) V(START) V(A3) V(A2) V(A1) V(A0) V(B3) V(B2) V(B1) V(B0)
+    6  + V(FINISHED) V(R7) V(R6) V(R5) V(R4) V(R3) V(R2) V(R1) V(R0)
+    7  
+    8  VFORCE__CLK CLK GND pulse (0 5v 2n 1n 1n 25n 50n)
+    9  
+   10  VFORCE__START START GND pulse (0 5v 2n 1n 1n 50n 5000n)
+   11  
+   12  VFORCE__A3 A3 GND dc 0V
+   13  
+   14  VFORCE__A2 A2 GND dc 0V
+   15  
+   16  VFORCE__A1 A1 GND dc 5V
+   17  
+   18  VFORCE__A0 A0 GND dc 5V
+   19  
+   20  VFORCE__B3 B3 GND dc 0V
+   21  
+   22  VFORCE__B2 B2 GND dc 5V
+   23  
+   24  VFORCE__B1 B1 GND dc 5V
+   25  
+   26  VFORCE__B0 B0 GND dc 5V
+   27  
+   28  
+   29  
+   30  
+   31  .OPTION NOASCII
+   32  .OPTION MODWL
+   33  .OPTION ENGNOT
+   34  .OPTION AEX
+   35  
+   36  .TEMP 27 
+   37  
+   38  .TRAN  0 1000N 0N 
+   39  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+
+***** GENERATION ...
+
+Warning 1615: In file "./EECS301/lab3/TopModel_Multiplier/ami05a/TopModel_Multiplier_ami05a.cir" line 38:
++   COMMAND ".TRAN": Tstep can not be <= 0.0.
++   It is set to Tmax/20.0 = 5.000e-08 s.
+
+***** 0  error(s). 
+***** 1  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (bytes): 139907072
+2394 elements
+1343 nodes 
+10 input signals
+Detail about objects and nodes found in the design...
+Number of nodes                     1343
+Number of intrinsic nodes           0
+Number of input signals             10
+Number of resistors                 0
+Number of floating capacitors       0
+Number of grounded capacitors       0
+Number of inductors                 0
+Number of voltage sources           9
+Number of current sources           0
+Number of dependent sources         0
+Number of diodes                    0
+Number of BJT                       0
+Number of JFET                      0
+Number of MOS                       2382
+Number of SWITCHES                  0
+Number of transmission lines        0
+Total number of elements            2391
+
+Eldo VERSION : ELDO 2009.2c (64 bits) Mon Jun  7 11:38:13 GMT 2010
+
+*** DATE:  3-Mar-2022 19:08:04
+
+*** TITLE: * Component: /home/gota/EECS301/lab3/TopModel_Multiplier  Viewpoint: ami05a
+
+TEMPERATURE : 27.000000 degrees C
+
+1*************** 3-Mar-2022 ***********************  ELDO 2009.2c (64 bits)  (v7.2_4.1)  ***********************19:08:04*****************
+
+0* Component: /home/gota/EECS301/lab3/Top
+0****                 MODELS PARAMETERS                                    TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+ DEVICE          MOS
+ MODEL: N
+ TYPE            N
+ LEVEL 53 : Bsim3v3 version 3.1
+
+  names    values    units     names    values    units     names    values    units   
+  -----    ------    -----     -----    ------    -----     -----    ------    -----   
+VER     = 3.1000E+00 -       MOBMOD  = 1          -       CAPMOD  = 2          -      
+VFBFLAG = 0          -       NQSMOD  = 0          -       NOIMOD  = 1          -      
+DERIV   = 1          -       BINFLAG = 0          -       PARAMCHK= 0          -      
+IIMOD   = 0          -       FNLEV   = 0          -       
+
+ * Threshold voltage related model parameters *
+   ------------------------------------------  
+VTH0    = 7.0860E-01 V       DELVTO  = 0.0        V       K1      = 8.3546E-01 V^1/2  
+K2      =-8.8431E-02 -       NCH     = 1.7000E+17 At/cm^3 K3      = 4.1440E+01 -      
+K3B     =-1.4000E+01 1/V     DVT0    = 3.6139E+00 -       DVT1    = 3.7957E-01 -      
+DVT2    =-1.4000E-01 1/V     DVT0W   = 0.0        -       DVT1W   = 5.3000E+06 1/m    
+DVT2W   =-3.2000E-02 1/V     DSUB    = 2.1731E-04 -       ETA0    = 3.8154E-04 -      
+ETAB    =-1.0292E-03 1/V     
+
+ * Subthreshold related parameters *
+   -------------------------------  
+NFACTOR = 1.2881E+00 -       CDSC    = 1.5060E-04 F/m^2   CDSCB   = 0.0        F/Vm^2 
+CDSCD   = 0.0        F/Vm^2  VOFF    =-1.1372E-01 V       CIT     = 0.0        F/m^2  
+
+ * Mobility related model parameters *
+   ---------------------------------  
+UA      = 7.5580E-10 m/V     UB      = 1.1812E-18 (m/V)^2 UC      = 2.5828E-11 m/V^2  
+U0      = 5.3370E-02 unit1   
+
+ * Saturation related parameters *
+   -----------------------------  
+PCLM    = 6.1718E-01 -       KETA    =-1.7317E-02 1/V     DELTA   = 1.0000E-02 V      
+A0      = 5.2930E-01 -       A1      = 0.0        1/V     A2      = 1.0000E+00 -      
+B0      = 1.2833E-06 m       B1      = 1.4081E-06 m       PVAG    = 1.2927E-02 -      
+PDIBLC1 = 1.8599E-01 -       PDIBLC2 = 3.4732E-03 -       PDIBLCB =-1.0000E-03 1/V    
+DROUT   = 4.0377E-01 -       VSAT    = 1.3010E+05 m/s     PSCBE1  = 5.9980E+09 V/m    
+PSCBE2  = 3.7881E-08 m/V     PRWB    = 6.3205E-05 V^-1/2  PRWG    =-1.0000E-03 1/V    
+RDSW    = 2.2684E+03 Ohm.um  AGS     = 1.4637E-01 1/V     
+
+ * Geometry modulation related parameters *
+   --------------------------------------  
+LREF    = 0.0        m       WREF    = 0.0        m       LINT    = 3.0345E-08 m      
+DLC     = 3.0345E-08 m       LL      = 0.0        m       LW      = 0.0        m      
+LWL     = 0.0        m       LLN     = 1.0000E+00 -       LWN     = 1.0000E+00 -      
+WINT    = 2.0435E-07 m       DWC     = 2.0435E-07 m       WL      = 0.0        m      
+WW      = 0.0        m       WWL     = 0.0        m       WLN     = 1.0000E+00 -      
+WWN     = 1.0000E+00 -       WR      = 1.0000E+00 -       W0      = 6.4808E-07 m      
+DWG     =-1.4461E-08 m/V     DWB     = 2.0775E-08 m/V^1/2 
+
+ * Temperature effect parameters *
+   -----------------------------  
+UPDATEPHI= 0          -       AT      = 3.3000E+04 m/sec   UTE     =-1.5000E+00 -      
+KT1     =-1.1000E-01 V       KT2     = 2.2000E-02 -       KT1L    = 0.0        mV     
+UA1     = 4.3100E-09 m/V     UB1     =-7.6100E-18 (m/V)^2 UC1     =-5.6000E-11 m/V^2  
+PRT     = 0.0        Ohm.um  RDSWTPOS= 1          -       
+
+ * Overlap capacitance related and dynamic model parameters *
+   --------------------------------------------------------  
+XPART   = 4.0000E-01 -       CLC     = 1.0000E-07 m       CLE     = 6.0000E-01 -      
+CGDO    = 1.9900E-10 F/m     CGDL    = 0.0        F/m     CGSO    = 1.9900E-10 F/m    
+CGSL    = 0.0        F/m     CGBO    = 0.0        F/m     CKAPPA  = 6.0000E-01 V      
+CF      = 7.4302E-11 F/m     ELM     = 5.0000E+00 -       VFBCV   =-1.0000E+00 -      
+
+ * Substrate current related model parameters *
+   ----------------------------------------------
+ALPHA0  = 0.0        m/V     BETA0   = 3.0000E+01 V       
+
+ * Process and parameters extraction related model parameters *
+   ----------------------------------------------------------  
+TOX     = 1.4100E-08 m       DTOXCV  = 0.0        m       NGATE   = 0.0        At/cm^3
+NLX     = 1.0000E-10 m       XL      = 0.0        m       XW      = 0.0        m      
+ND      = 1.0000E+20 At/cm^3 
+
+ * Noise effect related model parameters *
+   -------------------------------------  
+THMLEV  = 0          -       FLKLEV  = 0          -       AF      = 1.0000E+00 -      
+KF      = 0.0        -       EF      = 1.0000E+00 -       NSTAR   = 2.0000E+14 -      
+FLKFLAG = 0.0        -       NOIFLAG = 0.0        -       NOIA    = 1.0000E+20 unit2  
+NOIB    = 5.0000E+04 1/V     NOIC    =-1.4000E-12 unit3   EM      = 4.1000E+07 V/m    
+
+ * Sidewall parasitic capacitances at gate side *
+   --------------------------------------------  
+MJSWG   = 1.0836E-01 -       PBSWG   = 1.0826E-01 V       CJSWG   = 3.8256E-10 F/m    
+WPEMOD  = 0.0        -       SCREF   = 1.0000E-06 m       KVTH0WE = 0.0        V      
+K2WE    = 0.0        -       KU0WE   = 0.0        -       WEB     = 0.0        -      
+WEC     = 0.0        -       
+
+ * Binning Parameters *
+   -------------------  
+BINUNIT = 1.0000E+00 -       
+* Display only non null Binning Parameters *
+PK2     = 2.5307E-02 -       LKETA   = 2.0497E-02 -       WKETA   = 1.8863E-02 -      
+PRDSW   =-1.6155E+01 -       PVTH0   = 2.1285E-02 -       
+   ------------------------------------------------------------------------  
+
+ *** Common extrinsic model parameters ***
+OPTACM  = 0          -       ALEV    = 0          -       RLEV    = 4          -      
+ * Access resistances related parameters *
+RD      = 0.0        Ohm     RS      = 0.0        Ohm     RSH     = 0.0        Ohm/Sq.
+RDC     = 0.0        Ohm     RSC     = 0.0        Ohm     
+ * Geometry related parameters *
+LD      = 3.0345E-08 m       WD      = 2.0435E-07 m       DL      = 0.0        m      
+DW      = 0.0        m       LDIF    = 0.0        m       HDIF    = 0.0        m      
+WMLT    = 1.0000E+00 -       LMLT    = 1.0000E+00 -       DEL     = 0.0        m      
+XJ      = 1.5000E-07 m       
+ * Static bulk-diode related parameters *
+DIOLEV  = 6          -       JS      = 1.0000E-04 A/m^2   JSW     = 0.0        A/m    
+IS      = 1.0000E-14 A       NJ      = 1.0000E+00 -       NDS     = 1.0000E+00 -      
+VNDS    =-1.0000E+00 V       VDLIN   = 5.0000E-01 -       
+ * Dynamic bulk-diode related parameters *
+DCAPLEV = 4          -       CJGATE  = 0.0                CBD     = 0.0        F      
+CBS     = 0.0        F       CJ      = 4.2338E-04 F/m^2   CJSW    = 3.8256E-10 F/m    
+FC      = 0.0        -       MJ      = 4.4959E-01 -       MJSW    = 1.0836E-01 -      
+TT      = 0.0        s       PB      = 9.8992E-01 V       PBSW    = 1.0826E-01 V      
+ * Temperature related Parameters 
+EG      = 1.1100E+00 eV      GAP1    = 7.0200E-04 eV/degK GAP2    = 1.1080E+03 degK   
+TNOM    = 2.7000E+01 degC    TLEV    = 0          -       TLEVC   = 0          -      
+TLEVI   = 3          -       XTI     = 3.0000E+00 -       
+ * Temperature Access Resistance related parameters * TLEVR = 1 
+TRD1    = 0.0        1/degK  TRS1    = 0.0        1/degK  TRSH1   = 0.0        1/degK 
+TRD2    = 0.0        unit4   TRS2    = 0.0        unit4   TRSH2   = 0.0        unit4  
+
+unit1 represents m^2/V/sec
+unit2 represents V^-1.m^-2
+unit3 represents V^-1.m^2
+unit4 represents 1/degK^2
+
+ DEVICE          MOS
+ MODEL: P
+ TYPE            P
+ LEVEL 53 : Bsim3v3 version 3.1
+
+  names    values    units     names    values    units     names    values    units   
+  -----    ------    -----     -----    ------    -----     -----    ------    -----   
+VER     = 3.1000E+00 -       MOBMOD  = 1          -       CAPMOD  = 2          -      
+VFBFLAG = 0          -       NQSMOD  = 0          -       NOIMOD  = 1          -      
+DERIV   = 1          -       BINFLAG = 0          -       PARAMCHK= 0          -      
+IIMOD   = 0          -       FNLEV   = 0          -       
+
+ * Threshold voltage related model parameters *
+   ------------------------------------------  
+VTH0    =-9.1800E-01 V       DELVTO  = 0.0        V       K1      = 5.5756E-01 V^1/2  
+K2      = 1.0265E-02 -       NCH     = 1.7000E+17 At/cm^3 K3      = 1.4066E+01 -      
+K3B     =-2.3033E+00 1/V     DVT0    = 2.2896E+00 -       DVT1    = 5.2131E-01 -      
+DVT2    =-1.3380E-01 1/V     DVT0W   = 0.0        -       DVT1W   = 5.3000E+06 1/m    
+DVT2W   =-3.2000E-02 1/V     DSUB    = 3.3894E-01 -       ETA0    = 1.1276E-01 -      
+ETAB    =-2.9484E-03 1/V     
+
+ * Subthreshold related parameters *
+   -------------------------------  
+NFACTOR = 1.2416E+00 -       CDSC    = 4.3637E-04 F/m^2   CDSCB   = 0.0        F/Vm^2 
+CDSCD   = 0.0        F/Vm^2  VOFF    =-8.3750E-02 V       CIT     = 0.0        F/m^2  
+
+ * Mobility related model parameters *
+   ---------------------------------  
+UA      = 2.2902E-09 m/V     UB      = 9.7797E-19 (m/V)^2 UC      =-3.6977E-11 m/V^2  
+U0      = 2.0245E-02 unit1   
+
+ * Saturation related parameters *
+   -----------------------------  
+PCLM    = 4.9848E+00 -       KETA    =-5.7693E-03 1/V     DELTA   = 1.0000E-02 V      
+A0      = 8.3569E-01 -       A1      = 0.0        1/V     A2      = 1.0000E+00 -      
+B0      = 2.3660E-06 m       B1      = 5.0000E-06 m       PVAG    = 1.0991E+01 -      
+PDIBLC1 = 2.4817E-05 -       PDIBLC2 = 1.0000E-02 -       PDIBLCB = 0.0        1/V    
+DROUT   = 9.9751E-01 -       VSAT    = 1.3079E+05 m/s     PSCBE1  = 3.4979E+09 V/m    
+PSCBE2  = 4.9744E-09 m/V     PRWB    = 1.7230E-02 V^-1/2  PRWG    = 2.3486E-03 1/V    
+RDSW    = 2.7468E+03 Ohm.um  AGS     = 1.5688E-01 1/V     
+
+ * Geometry modulation related parameters *
+   --------------------------------------  
+LREF    = 0.0        m       WREF    = 0.0        m       LINT    = 7.2050E-08 m      
+DLC     = 7.2050E-08 m       LL      = 0.0        m       LW      = 0.0        m      
+LWL     = 0.0        m       LLN     = 1.0000E+00 -       LWN     = 1.0000E+00 -      
+WINT    = 2.5863E-07 m       DWC     = 2.5863E-07 m       WL      = 0.0        m      
+WW      = 0.0        m       WWL     = 0.0        m       WLN     = 1.0000E+00 -      
+WWN     = 1.0000E+00 -       WR      = 1.0000E+00 -       W0      = 1.1478E-06 m      
+DWG     =-2.1331E-08 m/V     DWB     = 9.8575E-09 m/V^1/2 
+
+ * Temperature effect parameters *
+   -----------------------------  
+UPDATEPHI= 0          -       AT      = 3.3000E+04 m/sec   UTE     =-1.5000E+00 -      
+KT1     =-1.1000E-01 V       KT2     = 2.2000E-02 -       KT1L    = 0.0        mV     
+UA1     = 4.3100E-09 m/V     UB1     =-7.6100E-18 (m/V)^2 UC1     =-5.6000E-11 m/V^2  
+PRT     = 0.0        Ohm.um  RDSWTPOS= 1          -       
+
+ * Overlap capacitance related and dynamic model parameters *
+   --------------------------------------------------------  
+XPART   = 4.0000E-01 -       CLC     = 1.0000E-07 m       CLE     = 6.0000E-01 -      
+CGDO    = 2.4000E-10 F/m     CGDL    = 0.0        F/m     CGSO    = 2.4000E-10 F/m    
+CGSL    = 0.0        F/m     CGBO    = 0.0        F/m     CKAPPA  = 6.0000E-01 V      
+CF      = 7.4302E-11 F/m     ELM     = 5.0000E+00 -       VFBCV   =-1.0000E+00 -      
+
+ * Substrate current related model parameters *
+   ----------------------------------------------
+ALPHA0  = 0.0        m/V     BETA0   = 3.0000E+01 V       
+
+ * Process and parameters extraction related model parameters *
+   ----------------------------------------------------------  
+TOX     = 1.4100E-08 m       DTOXCV  = 0.0        m       NGATE   = 0.0        At/cm^3
+NLX     = 1.1148E-10 m       XL      = 0.0        m       XW      = 0.0        m      
+ND      = 1.0000E+20 At/cm^3 
+
+ * Noise effect related model parameters *
+   -------------------------------------  
+THMLEV  = 0          -       FLKLEV  = 0          -       AF      = 1.0000E+00 -      
+KF      = 0.0        -       EF      = 1.0000E+00 -       NSTAR   = 2.0000E+14 -      
+FLKFLAG = 0.0        -       NOIFLAG = 0.0        -       NOIA    = 9.9000E+18 unit2  
+NOIB    = 2.4000E+03 1/V     NOIC    = 1.4000E-12 unit3   EM      = 4.1000E+07 V/m    
+
+ * Sidewall parasitic capacitances at gate side *
+   --------------------------------------------  
+MJSWG   = 2.6537E-01 -       PBSWG   = 9.9000E-01 V       CJSWG   = 3.1147E-10 F/m    
+WPEMOD  = 0.0        -       SCREF   = 1.0000E-06 m       KVTH0WE = 0.0        V      
+K2WE    = 0.0        -       KU0WE   = 0.0        -       WEB     = 0.0        -      
+WEC     = 0.0        -       
+
+ * Binning Parameters *
+   -------------------  
+BINUNIT = 1.0000E+00 -       
+* Display only non null Binning Parameters *
+PK2     = 1.3967E-03 -       LKETA   = 5.7286E-03 -       WKETA   = 1.8630E-03 -      
+PRDSW   =-2.3126E+02 -       PVTH0   = 9.4205E-03 -       
+   ------------------------------------------------------------------------  
+
+ *** Common extrinsic model parameters ***
+OPTACM  = 0          -       ALEV    = 0          -       RLEV    = 4          -      
+ * Access resistances related parameters *
+RD      = 0.0        Ohm     RS      = 0.0        Ohm     RSH     = 0.0        Ohm/Sq.
+RDC     = 0.0        Ohm     RSC     = 0.0        Ohm     
+ * Geometry related parameters *
+LD      = 7.2050E-08 m       WD      = 2.5863E-07 m       DL      = 0.0        m      
+DW      = 0.0        m       LDIF    = 0.0        m       HDIF    = 0.0        m      
+WMLT    = 1.0000E+00 -       LMLT    = 1.0000E+00 -       DEL     = 0.0        m      
+XJ      = 1.5000E-07 m       
+ * Static bulk-diode related parameters *
+DIOLEV  = 6          -       JS      = 1.0000E-04 A/m^2   JSW     = 0.0        A/m    
+IS      = 1.0000E-14 A       NJ      = 1.0000E+00 -       NDS     = 1.0000E+00 -      
+VNDS    =-1.0000E+00 V       VDLIN   = 5.0000E-01 -       
+ * Dynamic bulk-diode related parameters *
+DCAPLEV = 4          -       CJGATE  = 0.0                CBD     = 0.0        F      
+CBS     = 0.0        F       CJ      = 7.2736E-04 F/m^2   CJSW    = 3.1147E-10 F/m    
+FC      = 0.0        -       MJ      = 4.9598E-01 -       MJSW    = 2.6537E-01 -      
+TT      = 0.0        s       PB      = 9.6656E-01 V       PBSW    = 9.9000E-01 V      
+ * Temperature related Parameters 
+EG      = 1.1100E+00 eV      GAP1    = 7.0200E-04 eV/degK GAP2    = 1.1080E+03 degK   
+TNOM    = 2.7000E+01 degC    TLEV    = 0          -       TLEVC   = 0          -      
+TLEVI   = 3          -       XTI     = 3.0000E+00 -       
+ * Temperature Access Resistance related parameters * TLEVR = 1 
+TRD1    = 0.0        1/degK  TRS1    = 0.0        1/degK  TRSH1   = 0.0        1/degK 
+TRD2    = 0.0        unit4   TRS2    = 0.0        unit4   TRSH2   = 0.0        unit4  
+
+unit1 represents m^2/V/sec
+unit2 represents V^-1.m^-2
+unit3 represents V^-1.m^2
+unit4 represents 1/degK^2
+
+
+
+
+
+1*************** 3-Mar-2022 ***********************  ELDO 2009.2c (64 bits)  (v7.2_4.1)  ***********************19:08:04*****************
+
+0* Component: /home/gota/EECS301/lab3/TopModel_Multiplier  Viewpoint: ami05a
+0****                 OPTION SUMMARY                                        TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+*** DC Control Options : 
+
+GMIN           = 1.00e-12 NMAXSIZE       = 60000    ITL1           = 100      
+GRAMP          = 0        NETSIZE        = 100      VMINDC         = UNDEF    
+VMAXDC         = UNDEF    
+
+*** Initial Accuracy Control Options (May be adjusted during simulation): 
+
+ITOL           = 1.00e-06 EPS            = 5.00e-03 VNTOL          = 1.00e-06 
+RELTOL         = 1.00e-03 RELERR         = 5.00e-02 PIVREL         = 1.00e-03 
+PIVTOL         = 1.00e-16 ABSTOL         = 1.00e-12 FLXTOL         = 1.00e-11 
+MAXORD         = 2.00e+00 
+
+*** Time-step Control Options : 
+
+ZOOMTIME       = 1.00e+00 STEP           = 0.00e+00 STARTSMP       = 0.00e+00 
+FREQSMP        = 0.00e+00 COURESOL       = 0.00e+00 TRTOL          = 7.00e+00 
+HMIN           = 1.00e-12 ITL3           = 3        ITL4           = 13       
+FT             = 1.25e-01 DCLOG          = 1.00e+00 LVLTIM         = 2        
+LVLCNV         = 2        DVDT           = -1       RELVAR         = 1.50e-01 
+ABSVAR         = 2.00e-01 SAMPLE         = 0.00e+00 HMAX           = UNDEF    
+
+
+*** MosFet default Options : 
+
+SCALE          = 1.00e+00 SCALM          = 1.00e+00 SCALEBSIM      = 1.00e+00 
+DEFAD          = UNDEF    DEFAS          = UNDEF    DEFPD          = UNDEF    
+DEFPS          = UNDEF    DEFW           = 1.00e-04 DEFL           = 1.00e-04 
+DEFNRD         = UNDEF    DEFNRS         = UNDEF    XA             = 6.00e-06 
+LIMRMOS        = UNDEF    SHRINK         = 1.00e+00 
+
+*** General Information Options : 
+
+SDA            = 0        CPTIME         = UNDEF    STAT           = 0        
+TIMEDIV        = 0        SIMUDIV        = 10       SAVETIME       = 0        
+MAXTRAN        = 1000     MAXNODES       = 200000   MAXV           = 1.00e+13 
+LIMPROBE       = 10000    FLICKER_NOISE  = 0        THERMAL_NOISE  = 0        
+TNOM           = 2.70e+01 TMAX           = UNDEF    
+SPICDC         = 0        SPIOUT         = 0        NEWTON         = 0        
+OSR            = 0        TRAP           = 1        GEAR           = 0        
+BE             = 0        PROBEOP        = 0        NOLAT          = 0        
+NWLAT          = 0        ANALOG         = 0        BBDEBUG        = 0        
+NOSIZECHK      = 0        QTRUNC         = 0        UNBOUND        = 0        
+LCAPOP         = 0        NOAEX          = 1        AEX            = 1        
+AEX            = 1        STVER          = 0        MOTOROLA       = 0        
+AMS            = 0        ASPEC          = 0        INPUT          = 0        
+NOINIT         = 0        PSF            = 0        WSF            = 0        
+WSFASCII       = 0        NOBIN          = 0        NOCOU          = 1        
+WL             = 0        NODE           = 0        LIST           = 0        
+SPI3BIN        = 0        SPI3ASC        = 0        NOMOD          = 0        
+WSF            = 0        WSFASCII       = 0        NOBIN          = 0        
+NOCOU          = 1        RMOS           = 0        NWRMOS         = 1        
+NONWRMOS       = 0        USEDEFAP       = 0        NOASCII        = 1        
+ASCII          = 0        MIXED          = 0        SWITCH         = 0        
+USERSWITCH     = 0        TIMING         = 0        MODWL          = 1        
+ULOGIC         = 0        
+
+
+
+***> DC CPU TIME 0s 200ms <***
+
+DC:23 iterations FOR DC analysis
+
+
+
+
+1*************** 3-Mar-2022 ***********************  ELDO 2009.2c (64 bits)  (v7.2_4.1)  ***********************19:08:04*****************
+
+0* Component: /home/gota/EECS301/lab3/TopModel_Multiplier  Viewpoint: ami05a
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE    
+ VDD       5.0000     
+ B0       5.0000     
+ B1       5.0000     
+ B2       5.0000     
+ A0       5.0000     
+ A1       5.0000     
+ CLK       0.0000     
+ START       0.0000     
+ X_MULTIPLIER1.CL0_NX414       5.0000     
+ X_MULTIPLIER1.CL0_NOT_CLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$1071       16.7953N   
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$1071       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$1071       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$1071       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_4.BCLK-       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_4.BCLK       7.8038N    
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$1074       120.0408N  
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$1071       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.BCLK-       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.BCLK       7.8038N    
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$1074       120.0408N  
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$1071       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_3.BCLK-       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_3.BCLK       7.8038N    
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$1074       120.0408N  
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$1071       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.BCLK-       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.BCLK       7.8038N    
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$1074       120.0408N  
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$1071       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_2.BCLK-       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_2.BCLK       7.8038N    
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$1074       120.0408N  
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$1071       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.BCLK-       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.BCLK       7.8038N    
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$1074       119.6376N  
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$1071       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_1.BCLK-       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_1.BCLK       7.8038N    
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$1074       120.0408N  
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$1071       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_0.BCLK-       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_0.BCLK       7.8038N    
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$1074       120.0408N  
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$1071       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.BCLK-       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.BCLK       7.8038N    
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$1074       119.6376N  
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$1071       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$1071       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$1071       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$1074       120.0289N  
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$1071       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.BCLK-       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.BCLK       7.8038N    
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$1074       120.0408N  
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$1071       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.BCLK-       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.BCLK       7.8038N    
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$1074       120.0408N  
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$1071       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$1071       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$1071       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.BCLK-       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.BCLK       7.8038N    
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$1074       125.6183N  
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$1071       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.BCLK-       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.BCLK       7.8038N    
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$1074       125.6183N  
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$1071       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$1071       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.BCLK-       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.BCLK       7.8038N    
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$1074       125.6183N  
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$1071       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.BCLK-       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.BCLK       7.8038N    
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$1074       125.6183N  
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$1071       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$1071       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.BCLK-       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.BCLK       7.8038N    
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$1074       125.6183N  
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$1071       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.BCLK-       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.BCLK       7.8038N    
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$1074       125.6183N  
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$1071       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$1074       120.0289N  
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$1071       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$1071       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.BCLK-       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.BCLK       7.8038N    
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$1074       120.0408N  
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$1071       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.BCLK-       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.BCLK       7.8038N    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$1074       120.0408N  
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$1071       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.BCLK-       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.BCLK       7.8038N    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$1074       120.0408N  
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$1071       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.BCLK-       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.BCLK       7.8038N    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$1074       119.6376N  
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$1071       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.BCLK-       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.BCLK       7.8038N    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$1074       119.6376N  
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$1071       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.BCLK-       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.BCLK       7.8038N    
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$1074       119.6399N  
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$1071       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$1071       16.7953N   
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.BCLK-       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.BCLK       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$1074       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$1071       16.7953N   
+ X_MULTIPLIER1.X_REG_M_RESULT_7.BCLK-       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_7.BCLK       7.8038N    
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$1074       120.0408N  
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$1071       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_6.BCLK-       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_6.BCLK       7.8038N    
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$1074       120.0408N  
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$1071       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_5.BCLK-       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_5.BCLK       7.8038N    
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$1074       120.0408N  
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$1071       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$1070       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$1070       1.0632     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$1070       1.0632     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$1070       1.0632     
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$1073       60.0204N   
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$1070       1.0632     
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$1073       60.0204N   
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$1070       1.0632     
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$1073       60.0204N   
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$1070       1.0632     
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$1073       60.0204N   
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$1070       1.0632     
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$1073       60.0204N   
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$1070       1.0632     
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$1073       59.8188N   
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$1070       1.0632     
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$1073       60.0204N   
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$1070       1.0632     
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$1073       60.0204N   
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$1070       1.0632     
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$1073       59.8188N   
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$1070       1.0632     
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$1070       1.0632     
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$1070       1.0632     
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$1073       60.0144N   
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$1070       1.0632     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$1073       60.0204N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$1070       1.0632     
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$1073       60.0204N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$1070       1.0632     
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$1070       1.0632     
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$1070       1.0632     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$1073       62.8092N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$1070       1.0632     
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$1073       62.8092N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$1070       1.0632     
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$1070       1.0632     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$1073       62.8092N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$1070       1.0632     
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$1073       62.8092N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$1070       1.0632     
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$1070       1.0632     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$1073       62.8092N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$1070       1.0632     
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$1073       62.8092N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$1070       1.0632     
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$1073       60.0144N   
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$1070       1.0632     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$1070       1.0632     
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$1073       60.0204N   
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$1070       1.0632     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$1073       60.0204N   
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$1070       1.0632     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$1073       60.0204N   
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$1070       1.0632     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$1073       59.8188N   
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$1070       1.0632     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$1073       59.8188N   
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$1070       1.0632     
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$1073       59.8199N   
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$1070       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$1070       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$1073       1.5667M    
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$1070       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$1073       60.0204N   
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$1070       1.0632     
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$1073       60.0204N   
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$1070       1.0632     
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$1073       60.0204N   
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$1070       1.0632     
+ X_MULTIPLIER1.CL0_NX317       7.8038N    
+ X_MULTIPLIER1.CL0_NX359       7.8038N    
+ X_MULTIPLIER1.CL0_M_NEXTSTATE_1       5.0000     
+ X_MULTIPLIER1.CL0_NX306       7.8038N    
+ X_MULTIPLIER1.NX333       5.0000     
+ X_MULTIPLIER1.NX339       5.0000     
+ X_MULTIPLIER1.NX347       5.0000     
+ X_MULTIPLIER1.AR0_M_REG_0       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[31]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[30]       5.0000     
+ X_MULTIPLIER1.M_QREGOUT_3       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[29]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[28]       5.0000     
+ X_MULTIPLIER1.M_QREGOUT_2       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[27]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[26]       5.0000     
+ X_MULTIPLIER1.M_QREGOUT_1       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[25]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[24]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[23]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[22]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[21]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[20]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[19]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[18]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[17]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[16]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[15]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[14]       5.0000     
+ X_MULTIPLIER1.M_ADDSUBB_1       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[13]       5.0000     
+ X_MULTIPLIER1.M_ADDSUBA_1       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[12]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[11]       5.0000     
+ X_MULTIPLIER1.M_ADDSUBB_0       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[10]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[9]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[8]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[7]       5.0000     
+ X_MULTIPLIER1.M_ADDSUBOUT_3       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[6]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[5]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[4]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[3]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[2]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[1]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[0]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[45]       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[44]       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[43]       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[42]       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[41]       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[40]       7.8038N    
+ X_MULTIPLIER1.M_QREGCTRL_0       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[39]       7.8038N    
+ X_MULTIPLIER1.CL0_M_CNT_2       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[38]       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[37]       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[36]       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[35]       7.8038N    
+ X_MULTIPLIER1.N$DUMMY_ESC1[34]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[33]       5.0000     
+ X_MULTIPLIER1.N$DUMMY_ESC1[32]       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$847       119.6376N  
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$847       120.0266N  
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$847       120.0408N  
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_IX185.N$5       5.0000     
+ X_MULTIPLIER1.X_CL0_IX127.N$5       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$847       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$849       16.7953N   
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$847       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$849       16.7953N   
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$847       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$849       16.7953N   
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$847       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$849       16.7953N   
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$847       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$849       16.7953N   
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$847       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$849       16.7953N   
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$847       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$849       16.7953N   
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$847       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$849       16.7953N   
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$847       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$849       16.7953N   
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$847       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$849       16.7953N   
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$847       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$849       16.7953N   
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$847       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$849       16.7953N   
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$847       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$849       16.7953N   
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$847       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$849       16.7953N   
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$847       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$849       16.7953N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$847       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$849       16.7953N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$847       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$849       16.7953N   
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$847       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$849       16.7953N   
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$847       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$849       16.7953N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$847       33.1767N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$849       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$847       33.1767N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$849       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$847       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$849       16.7953N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$847       33.1767N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$849       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$847       33.1767N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$849       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$847       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$849       16.7953N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$847       33.1767N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$849       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$847       33.1767N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$849       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$847       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$849       16.7953N   
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$847       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$849       16.7953N   
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$847       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$849       16.7953N   
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$847       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$849       16.7953N   
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$847       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$849       16.7953N   
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$847       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$849       16.7953N   
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$847       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$849       16.7953N   
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$847       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$849       16.7953N   
+ X_MULTIPLIER1.X_IX239.N$208       5.0000     
+ X_MULTIPLIER1.X_IX71.N$4       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$847       120.0408N  
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$847       120.0266N  
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$847       120.0266N  
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$847       120.0408N  
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$847       120.0266N  
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$847       120.0266N  
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$847       120.0408N  
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$847       120.0266N  
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$847       120.0266N  
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$847       120.0266N  
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$849       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$847       120.0266N  
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$849       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$847       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$849       16.7953N   
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$847       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$849       16.7953N   
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$847       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$849       16.7953N   
+ X_MULTIPLIER1.X_IX544.N$411       17.1557N   
+ X_MULTIPLIER1.X_IX546.N$411       17.1557N   
+ R0       7.8038N    
+ R1       7.8038N    
+ R2       7.8038N    
+ R3       7.8038N    
+ R4       7.8038N    
+ R5       7.8038N    
+ R6       7.8038N    
+ R7       7.8038N    
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$852       59.8188N   
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$852       60.0133N   
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$852       60.0204N   
+ X_MULTIPLIER1.X_CL0_IX185.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX127.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX372.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX314.N$1       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$848       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$1069       4.9404     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$852       1.5667M    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$848       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$1069       4.9404     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$852       1.5667M    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$848       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$1069       4.9404     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$852       1.5667M    
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$848       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$1072       2.3835F    
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$1069       4.9404     
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$852       1.5667M    
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$848       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$1072       2.3835F    
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$1069       4.9404     
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$852       1.5667M    
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$851       4.3012     
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$848       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$845       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$1072       2.3835F    
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$1069       4.9404     
+ X_MULTIPLIER1.X_REG_M_RESULT_3.N$852       1.5667M    
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$848       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$1072       2.3835F    
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$1069       4.9404     
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$852       1.5667M    
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$851       4.3012     
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$848       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$845       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$1072       2.3835F    
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$1069       4.9404     
+ X_MULTIPLIER1.X_REG_M_RESULT_2.N$852       1.5667M    
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$848       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$1072       2.3756F    
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$1069       4.9729     
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$852       1.5667M    
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$851       4.3012     
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$848       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$845       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$1072       2.3835F    
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$1069       4.9404     
+ X_MULTIPLIER1.X_REG_M_RESULT_1.N$852       1.5667M    
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$848       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$1072       2.3835F    
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$1069       4.9404     
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$852       1.5667M    
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$848       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$1072       2.3756F    
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$1069       4.9729     
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$852       1.5667M    
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$848       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$1069       4.9404     
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$852       1.5667M    
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$848       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$1069       4.9404     
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$852       1.5667M    
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$848       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$1072       2.3832F    
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$1069       4.9413     
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$852       1.5665M    
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$848       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$1072       2.3835F    
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$1069       4.9404     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$852       1.5667M    
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$848       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$1072       2.3835F    
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$1069       4.9404     
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$852       1.5667M    
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$848       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$1069       4.9404     
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$852       1.5667M    
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$848       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$1069       4.9404     
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$852       1.5667M    
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$848       4.9882     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$1072       59.1351N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$1069       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$852      -62.5008A   
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$848       4.9882     
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$1072       59.1351N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$1069       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$852      -62.5008A   
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$848       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$1069       4.9404     
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$852       1.5667M    
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$848       4.9882     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$1072       59.1351N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$1069       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$852      -62.5008A   
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$848       4.9882     
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$1072       59.1351N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$1069       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$852      -62.5008A   
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$848       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$1069       4.9404     
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$852       1.5667M    
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$848       4.9882     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$1072       59.1351N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$1069       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$852      -62.5008A   
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$848       4.9882     
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$1072       59.1351N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$1069       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$852      -62.5008A   
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$848       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$1072       2.3832F    
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$1069       4.9413     
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$852       1.5665M    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$848       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$1069       4.9404     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$852       1.5667M    
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$848       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$1072       2.3835F    
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$1069       4.9404     
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$852       1.5667M    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$848       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$1072       2.3835F    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$1069       4.9404     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$852       1.5667M    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$848       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$1072       2.3835F    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$1069       4.9404     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$852       1.5667M    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$848       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$1072       2.3756F    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$1069       4.9729     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$852       1.5667M    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$848       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$1072       2.3756F    
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$1069       4.9729     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$852       1.5667M    
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$848       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$1072       2.3756F    
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$1069       4.9727     
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$852       1.5665M    
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$852       60.0204N   
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$852       60.0133N   
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$852       60.0133N   
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$852       60.0204N   
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$852       60.0133N   
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$852       60.0133N   
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$852       60.0204N   
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$852       60.0133N   
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$852       60.0133N   
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$852       60.0133N   
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$848       1.0632     
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$1072       4.3012     
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$1069       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$852       60.0133N   
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$848       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$1072       2.3835F    
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$1069       4.9404     
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$852       1.5667M    
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$848       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$1072       2.3835F    
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$1069       4.9404     
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$852       1.5667M    
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$851       4.3012     
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$848       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$845       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$1072       2.3835F    
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$1069       4.9404     
+ X_MULTIPLIER1.X_REG_M_RESULT_5.N$852       1.5667M    
+ FINISHED       5.0000     
+ X_MULTIPLIER1.CL0_NX367       17.1557N   
+ X_MULTIPLIER1.CL0_NX412       5.0000     
+ X_MULTIPLIER1.M_QREGOUT_0       7.8038N    
+ X_MULTIPLIER1.CL0_M_QNEG       5.0000     
+ X_MULTIPLIER1.CL0_M_CNT_0       5.0000     
+ X_MULTIPLIER1.CL0_M_CNT_1       5.0000     
+ X_MULTIPLIER1.CL0_NX334       3.6266N    
+ X_MULTIPLIER1.CL0_NX349       17.1557N   
+ X_MULTIPLIER1.CL0_NX304       5.0000     
+ X_MULTIPLIER1.M_ADDSUBA_2       7.8038N    
+ X_MULTIPLIER1.M_ADDSUBCTRL       5.0000     
+ X_MULTIPLIER1.M_ADDSUBB_2       7.8038N    
+ X_MULTIPLIER1.M_ADDSUBB_3       7.8038N    
+ X_MULTIPLIER1.M_ADDSUBA_3       7.8038N    
+ X_MULTIPLIER1.CL0_M_NEXTSTATE_2       5.0000     
+ X_MULTIPLIER1.NX545       5.0000     
+ X_MULTIPLIER1.M_AREGCTRL_0       5.0000     
+ X_MULTIPLIER1.CL0_M_NEXTSTATE_0       5.0000     
+ X_MULTIPLIER1.M_QREGNEG       7.8038N    
+ X_MULTIPLIER1.CL0_NX332       48.7294N   
+ X_MULTIPLIER1.M_AREGCTRL_1       5.0000     
+ X_MULTIPLIER1.M_MREGCTRL       5.0000     
+ X_MULTIPLIER1.AR0_M_REG_1       7.8038N    
+ X_MULTIPLIER1.M_ADDSUBOUT_0       7.8038N    
+ X_MULTIPLIER1.AR0_M_REG_3       7.8038N    
+ X_MULTIPLIER1.M_ADDSUBOUT_2       7.8038N    
+ X_MULTIPLIER1.AR0_M_REG_2       7.8038N    
+ X_MULTIPLIER1.M_ADDSUBOUT_1       7.8038N    
+ X_MULTIPLIER1.MR0_M_REG_0       7.8038N    
+ X_MULTIPLIER1.MR0_M_REG_1       7.8038N    
+ X_MULTIPLIER1.MR0_M_REG_2       7.8038N    
+ X_MULTIPLIER1.MR0_M_REG_3       7.8038N    
+ X_MULTIPLIER1.M_QREGCTRL_1       5.0000     
+ X_MULTIPLIER1.QR0_M_REG_1       7.8038N    
+ X_MULTIPLIER1.QR0_M_REG_0       7.8038N    
+ X_MULTIPLIER1.QR0_M_REG_2       7.8038N    
+ X_MULTIPLIER1.QR0_M_REG_3       7.8038N    
+ X_MULTIPLIER1.M_QREGCARRY       7.8038N    
+ X_MULTIPLIER1.M_ADDSUBA_0       7.8038N    
+ X_MULTIPLIER1.NX171       8.4720N    
+ X_MULTIPLIER1.NX547       5.0000     
+ X_MULTIPLIER1.CL0_NX148       5.0000     
+ X_MULTIPLIER1.X_CL0_IX352.N$212       5.0000     
+ X_MULTIPLIER1.X_IX165.N$212       5.0000     
+ X_MULTIPLIER1.X_IX225.N$212       5.0000     
+ X_MULTIPLIER1.X_CL0_IX101.N$208       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX363.N$5       5.0000     
+ X_MULTIPLIER1.X_CL0_IX423.N$411       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX425.N$411       17.1557N   
+ X_MULTIPLIER1.X_IX477.N$411       17.1557N   
+ X_MULTIPLIER1.X_IX479.N$411       17.1557N   
+ X_MULTIPLIER1.X_IX481.N$411       17.1557N   
+ X_MULTIPLIER1.X_IX345.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX355.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX335.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX325.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX315.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX107.N$212       5.0000     
+ X_MULTIPLIER1.X_IX435.N$208       17.1557N   
+ X_MULTIPLIER1.X_IX260.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX429.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX270.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX409.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX280.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX389.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX290.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX369.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX71.N$11       53.1409N   
+ X_MULTIPLIER1.X_IX475.N$411       17.1557N   
+ X_MULTIPLIER1.X_IX293.N$212       5.0000     
+ X_MULTIPLIER1.X_CL0_IX352.N$213       536.3390P  
+ X_MULTIPLIER1.X_CL0_IX352.N$3       15.8556N   
+ X_MULTIPLIER1.X_CL0_IX352.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX335.N$1       4.9414     
+ X_MULTIPLIER1.X_CL0_IX191.N$1       5.0000     
+ X_MULTIPLIER1.X_IX165.N$213       4.1543     
+ X_MULTIPLIER1.X_IX165.N$3       26.5227N   
+ X_MULTIPLIER1.X_IX165.N$1       921.0866M  
+ X_MULTIPLIER1.X_IX225.N$213       4.1543     
+ X_MULTIPLIER1.X_IX225.N$3       26.5227N   
+ X_MULTIPLIER1.X_IX225.N$1       921.0866M  
+ X_MULTIPLIER1.X_CL0_IX101.N$4       5.0000     
+ X_MULTIPLIER1.X_CL0_IX363.N$7       29.0742M   
+ X_MULTIPLIER1.X_CL0_IX286.N$4       336.7872N  
+ X_MULTIPLIER1.X_CL0_IX333.N$8       24.3647N   
+ X_MULTIPLIER1.X_CL0_IX333.N$4       981.7088M  
+ X_MULTIPLIER1.X_CL0_IX346.N$3       898.1275M  
+ X_MULTIPLIER1.X_CL0_IX346.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX165.N$418       903.3530M  
+ X_MULTIPLIER1.X_CL0_IX165.N$211       5.0000     
+ X_MULTIPLIER1.X_CL0_IX372.N$418       901.7993M  
+ X_MULTIPLIER1.X_CL0_IX372.N$211       4.9622     
+ X_MULTIPLIER1.X_IX345.N$7       5.0000     
+ X_MULTIPLIER1.X_IX345.N$3       4.1543     
+ X_MULTIPLIER1.X_IX345.N$2       5.0000     
+ X_MULTIPLIER1.X_IX345.N$1       536.3390P  
+ X_MULTIPLIER1.X_IX355.N$7       5.0000     
+ X_MULTIPLIER1.X_IX355.N$3       4.1543     
+ X_MULTIPLIER1.X_IX355.N$2       5.0000     
+ X_MULTIPLIER1.X_IX355.N$1       536.3390P  
+ X_MULTIPLIER1.X_IX335.N$7       5.0000     
+ X_MULTIPLIER1.X_IX335.N$3       4.1543     
+ X_MULTIPLIER1.X_IX335.N$2       5.0000     
+ X_MULTIPLIER1.X_IX335.N$1       536.3390P  
+ X_MULTIPLIER1.X_IX325.N$7       5.0000     
+ X_MULTIPLIER1.X_IX325.N$3       4.1543     
+ X_MULTIPLIER1.X_IX325.N$2       5.0000     
+ X_MULTIPLIER1.X_IX325.N$1       29.0742M   
+ X_MULTIPLIER1.X_IX315.N$7       5.0000     
+ X_MULTIPLIER1.X_IX315.N$3       4.1543     
+ X_MULTIPLIER1.X_IX315.N$2       5.0000     
+ X_MULTIPLIER1.X_IX315.N$1       29.0742M   
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$851       4.3012     
+ X_MULTIPLIER1.X_REG_M_RESULT_4.N$845       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$851       4.3012     
+ X_MULTIPLIER1.X_REG_M_RESULT_0.N$845       5.0000     
+ X_MULTIPLIER1.X_IX107.N$213       4.1543     
+ X_MULTIPLIER1.X_IX107.N$3       26.5227N   
+ X_MULTIPLIER1.X_IX107.N$1       921.0866M  
+ X_MULTIPLIER1.X_IX435.N$4       968.7470M  
+ X_MULTIPLIER1.X_IX239.N$4       4.9628     
+ X_MULTIPLIER1.X_IX260.N$3       4.1543     
+ X_MULTIPLIER1.X_IX260.N$2       5.0000     
+ X_MULTIPLIER1.X_IX429.N$3       4.1543     
+ X_MULTIPLIER1.X_IX429.N$2       5.0000     
+ X_MULTIPLIER1.X_IX270.N$3       4.1543     
+ X_MULTIPLIER1.X_IX270.N$2       5.0000     
+ X_MULTIPLIER1.X_IX409.N$3       4.1543     
+ X_MULTIPLIER1.X_IX409.N$2       5.0000     
+ X_MULTIPLIER1.X_IX280.N$3       4.1543     
+ X_MULTIPLIER1.X_IX280.N$2       5.0000     
+ X_MULTIPLIER1.X_IX389.N$3       4.1543     
+ X_MULTIPLIER1.X_IX389.N$2       5.0000     
+ X_MULTIPLIER1.X_IX290.N$3       4.1543     
+ X_MULTIPLIER1.X_IX290.N$2       5.0000     
+ X_MULTIPLIER1.X_IX369.N$3       4.1543     
+ X_MULTIPLIER1.X_IX369.N$2       5.0000     
+ X_MULTIPLIER1.X_IX71.N$7       944.4892M  
+ X_MULTIPLIER1.X_IX71.N$3       19.8621N   
+ X_MULTIPLIER1.X_IX71.N$2       5.0000     
+ X_MULTIPLIER1.X_IX71.N$1       26.5705N   
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$851       4.3012     
+ X_MULTIPLIER1.X_REG_M_RESULT_7.N$845       5.0000     
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$851       4.3012     
+ X_MULTIPLIER1.X_REG_M_RESULT_6.N$845       5.0000     
+ X_MULTIPLIER1.X_CL0_IX341.N$8       24.3647N   
+ X_MULTIPLIER1.X_CL0_IX322.N$3       4.9294     
+ X_MULTIPLIER1.X_CL0_IX322.N$1       4.9985     
+ X_MULTIPLIER1.X_IX293.N$213       29.0580M   
+ X_MULTIPLIER1.X_IX293.N$3       1.0727N    
+ X_MULTIPLIER1.X_IX293.N$1       5.0000     
+ X_MULTIPLIER1.CL0_NX371       9.3872N    
+ X_MULTIPLIER1.CL0_NX362       17.1557N   
+ X_MULTIPLIER1.CL0_NX14       5.0000     
+ X_MULTIPLIER1.CL0_NX145       5.0000     
+ X_MULTIPLIER1.CL0_NX321       2.1788N    
+ X_MULTIPLIER1.CL0_NX147       5.0000     
+ X_MULTIPLIER1.NX164       53.0455N   
+ X_MULTIPLIER1.NX224       53.0455N   
+ X_MULTIPLIER1.CL0_NX345       17.4700N   
+ X_MULTIPLIER1.CL0_NX424       5.0000     
+ X_MULTIPLIER1.CL0_NX426       5.0000     
+ X_MULTIPLIER1.CL0_NX263       17.6579N   
+ X_MULTIPLIER1.NX478       5.0000     
+ X_MULTIPLIER1.NX480       5.0000     
+ X_MULTIPLIER1.NX482       5.0000     
+ X_MULTIPLIER1.NX36       3.6266N    
+ X_MULTIPLIER1.NX476       5.0000     
+ X_MULTIPLIER1.NX335       5.0000     
+ X_MULTIPLIER1.NX349       5.0000     
+ X_MULTIPLIER1.NX341       5.0000     
+ X_MULTIPLIER1.NX106       53.0455N   
+ X_MULTIPLIER1.NX434       43.8260N   
+ X_MULTIPLIER1.NX70       5.0000     
+ X_MULTIPLIER1.NX395       5.0000     
+ X_MULTIPLIER1.CL0_NX340       48.7294N   
+ X_MULTIPLIER1.CL0_NX173       17.6579N   
+ X_MULTIPLIER1.X_CL0_IX417.N$411       5.0000     
+ X_MULTIPLIER1.X_CL0_IX352.N$4       31.7111N   
+ X_MULTIPLIER1.X_IX167.N$212       5.0000     
+ X_MULTIPLIER1.X_IX227.N$212       5.0000     
+ X_MULTIPLIER1.X_CL0_IX216.N$7       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX236.N$4       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX256.N$4       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX226.N$4       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX196.N$4       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX266.N$3       48.7294N   
+ X_MULTIPLIER1.X_IX305.N$215       5.0000     
+ X_MULTIPLIER1.X_IX180.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX53.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX190.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX99.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX200.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX157.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX210.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX217.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX345.N$11       5.0000     
+ X_MULTIPLIER1.X_IX355.N$11       5.0000     
+ X_MULTIPLIER1.X_IX335.N$11       5.0000     
+ X_MULTIPLIER1.X_IX325.N$11       5.0000     
+ X_MULTIPLIER1.X_IX315.N$11       5.0000     
+ X_MULTIPLIER1.X_CL0_IX276.N$4       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX246.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX220.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX197.N$4       17.1557N   
+ X_MULTIPLIER1.X_IX260.N$11       5.0000     
+ X_MULTIPLIER1.X_IX429.N$11       5.0000     
+ X_MULTIPLIER1.X_IX270.N$11       5.0000     
+ X_MULTIPLIER1.X_IX409.N$11       5.0000     
+ X_MULTIPLIER1.X_IX280.N$11       5.0000     
+ X_MULTIPLIER1.X_IX389.N$11       5.0000     
+ X_MULTIPLIER1.X_IX290.N$11       5.0000     
+ X_MULTIPLIER1.X_IX369.N$11       5.0000     
+ X_MULTIPLIER1.X_IX300.N$4       5.0000     
+ X_MULTIPLIER1.X_CL0_IX176.N$3       48.7294N   
+ X_MULTIPLIER1.X_IX293.N$4       5.0000     
+ X_MULTIPLIER1.X_IX109.N$212       5.0000     
+ X_MULTIPLIER1.X_IX167.N$213       29.0579M   
+ X_MULTIPLIER1.X_IX167.N$3       1.0727N    
+ X_MULTIPLIER1.X_IX167.N$1       5.0000     
+ X_MULTIPLIER1.X_IX227.N$213       29.0579M   
+ X_MULTIPLIER1.X_IX227.N$3       1.0727N    
+ X_MULTIPLIER1.X_IX227.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX216.N$6       4.1543     
+ X_MULTIPLIER1.X_CL0_IX216.N$5       5.0000     
+ X_MULTIPLIER1.X_CL0_IX236.N$7       4.9527     
+ X_MULTIPLIER1.X_CL0_IX236.N$3       25.9850N   
+ X_MULTIPLIER1.X_CL0_IX236.N$2       944.4892M  
+ X_MULTIPLIER1.X_CL0_IX236.N$1       298.7012A  
+ X_MULTIPLIER1.X_CL0_IX256.N$3       25.9850N   
+ X_MULTIPLIER1.X_CL0_IX256.N$2       944.4892M  
+ X_MULTIPLIER1.X_CL0_IX226.N$3       26.5705N   
+ X_MULTIPLIER1.X_CL0_IX226.N$2       944.4892M  
+ X_MULTIPLIER1.X_CL0_IX196.N$3       26.5705N   
+ X_MULTIPLIER1.X_CL0_IX196.N$2       944.4892M  
+ X_MULTIPLIER1.X_CL0_IX164.N$211       5.0000     
+ X_MULTIPLIER1.X_CL0_IX156.N$2       24.3647N   
+ X_MULTIPLIER1.X_CL0_IX166.N$2       24.3647N   
+ X_MULTIPLIER1.X_CL0_IX186.N$2       24.3647N   
+ X_MULTIPLIER1.X_CL0_IX266.N$2       24.3647N   
+ X_MULTIPLIER1.X_CL0_IX266.N$1       981.7088M  
+ X_MULTIPLIER1.X_IX37.N$1       4.9414     
+ X_MULTIPLIER1.X_IX31.N$5       7.3661N    
+ X_MULTIPLIER1.X_IX336.N$9       29.0742M   
+ X_MULTIPLIER1.X_IX336.N$4       5.0000     
+ X_MULTIPLIER1.X_IX336.N$8       4.1543     
+ X_MULTIPLIER1.X_IX350.N$9       29.0742M   
+ X_MULTIPLIER1.X_IX350.N$4       5.0000     
+ X_MULTIPLIER1.X_IX350.N$8       4.1543     
+ X_MULTIPLIER1.X_IX342.N$9       29.0742M   
+ X_MULTIPLIER1.X_IX342.N$4       5.0000     
+ X_MULTIPLIER1.X_IX342.N$8       4.1543     
+ X_MULTIPLIER1.X_IX305.N$2       29.0742M   
+ X_MULTIPLIER1.X_IX305.N$6       5.0000     
+ X_MULTIPLIER1.X_IX305.N$1       4.1543     
+ X_MULTIPLIER1.X_IX180.N$7       5.0000     
+ X_MULTIPLIER1.X_IX180.N$3       26.5705N   
+ X_MULTIPLIER1.X_IX180.N$2       944.4893M  
+ X_MULTIPLIER1.X_IX180.N$1       19.8621N   
+ X_MULTIPLIER1.X_IX53.N$7       5.0000     
+ X_MULTIPLIER1.X_IX53.N$3       26.5705N   
+ X_MULTIPLIER1.X_IX53.N$2       944.4893M  
+ X_MULTIPLIER1.X_IX53.N$1       19.8621N   
+ X_MULTIPLIER1.X_IX190.N$7       5.0000     
+ X_MULTIPLIER1.X_IX190.N$3       26.5705N   
+ X_MULTIPLIER1.X_IX190.N$2       944.4893M  
+ X_MULTIPLIER1.X_IX190.N$1       19.8621N   
+ X_MULTIPLIER1.X_IX99.N$7       5.0000     
+ X_MULTIPLIER1.X_IX99.N$3       26.5705N   
+ X_MULTIPLIER1.X_IX99.N$2       944.4893M  
+ X_MULTIPLIER1.X_IX99.N$1       19.8621N   
+ X_MULTIPLIER1.X_IX200.N$7       5.0000     
+ X_MULTIPLIER1.X_IX200.N$3       26.5705N   
+ X_MULTIPLIER1.X_IX200.N$2       944.4893M  
+ X_MULTIPLIER1.X_IX200.N$1       19.8621N   
+ X_MULTIPLIER1.X_IX157.N$7       5.0000     
+ X_MULTIPLIER1.X_IX157.N$3       26.5705N   
+ X_MULTIPLIER1.X_IX157.N$2       944.4893M  
+ X_MULTIPLIER1.X_IX157.N$1       19.8621N   
+ X_MULTIPLIER1.X_IX210.N$7       5.0000     
+ X_MULTIPLIER1.X_IX210.N$3       4.1543     
+ X_MULTIPLIER1.X_IX210.N$2       5.0000     
+ X_MULTIPLIER1.X_IX210.N$1       29.0742M   
+ X_MULTIPLIER1.X_IX217.N$7       5.0000     
+ X_MULTIPLIER1.X_IX217.N$3       4.1543     
+ X_MULTIPLIER1.X_IX217.N$2       5.0000     
+ X_MULTIPLIER1.X_IX217.N$1       29.0742M   
+ X_MULTIPLIER1.X_IX370.N$9       74.0942N   
+ X_MULTIPLIER1.X_CL0_IX276.N$3       26.5705N   
+ X_MULTIPLIER1.X_CL0_IX276.N$2       944.4892M  
+ X_MULTIPLIER1.X_CL0_IX246.N$3       25.9844N   
+ X_MULTIPLIER1.X_CL0_IX246.N$2       944.4892M  
+ X_MULTIPLIER1.X_IX220.N$7       5.0000     
+ X_MULTIPLIER1.X_IX220.N$3       4.1543     
+ X_MULTIPLIER1.X_IX220.N$2       5.0000     
+ X_MULTIPLIER1.X_IX220.N$1       29.0742M   
+ X_MULTIPLIER1.X_IX197.N$7       5.0000     
+ X_MULTIPLIER1.X_IX197.N$3       4.1543     
+ X_MULTIPLIER1.X_IX197.N$2       5.0000     
+ X_MULTIPLIER1.X_IX197.N$1       29.0742M   
+ X_MULTIPLIER1.X_IX300.N$3       29.0742M   
+ X_MULTIPLIER1.X_IX300.N$2       5.0000     
+ X_MULTIPLIER1.X_CL0_IX341.N$4       981.7088M  
+ X_MULTIPLIER1.X_CL0_IX176.N$2       24.3647N   
+ X_MULTIPLIER1.X_CL0_IX176.N$1       981.7089M  
+ X_MULTIPLIER1.X_IX109.N$213       29.0579M   
+ X_MULTIPLIER1.X_IX109.N$3       1.0727N    
+ X_MULTIPLIER1.X_IX109.N$1       5.0000     
+ X_MULTIPLIER1.CL0_NX418       7.8038N    
+ X_MULTIPLIER1.CL0_NX298       7.8038N    
+ X_MULTIPLIER1.CL0_NX410       5.0000     
+ X_MULTIPLIER1.NX549       5.0000     
+ X_MULTIPLIER1.CL0_NX156       5.0000     
+ X_MULTIPLIER1.NX369       74.0942N   
+ X_MULTIPLIER1.NX166       5.0000     
+ X_MULTIPLIER1.NX226       5.0000     
+ X_MULTIPLIER1.CL0_NX102       5.0000     
+ X_MULTIPLIER1.CL0_NX215       5.0000     
+ X_MULTIPLIER1.CL0_NX164       19.3576N   
+ X_MULTIPLIER1.CL0_NX365       5.0000     
+ X_MULTIPLIER1.CL0_NX183       7.7552N    
+ X_MULTIPLIER1.CL0_NX153       6.8302N    
+ X_MULTIPLIER1.CL0_NX163       15.6571N   
+ X_MULTIPLIER1.CL0_NX265       5.0000     
+ X_MULTIPLIER1.NX30       14.7322N   
+ X_MULTIPLIER1.NX304       17.1557N   
+ X_MULTIPLIER1.NX344       17.1557N   
+ X_MULTIPLIER1.NX354       17.1557N   
+ X_MULTIPLIER1.NX334       17.1557N   
+ X_MULTIPLIER1.NX324       17.1557N   
+ X_MULTIPLIER1.NX314       17.1557N   
+ X_MULTIPLIER1.NX428       17.1557N   
+ X_MULTIPLIER1.NX408       17.1557N   
+ X_MULTIPLIER1.NX388       17.1557N   
+ X_MULTIPLIER1.NX368       17.1557N   
+ X_MULTIPLIER1.NX292       17.1557N   
+ X_MULTIPLIER1.NX259       17.1557N   
+ X_MULTIPLIER1.NX269       17.1557N   
+ X_MULTIPLIER1.NX279       17.1557N   
+ X_MULTIPLIER1.NX289       17.1557N   
+ X_MULTIPLIER1.NX108       5.0000     
+ X_MULTIPLIER1.CL0_NX357       7.8038N    
+ X_MULTIPLIER1.CL0_NX175       5.0000     
+ X_MULTIPLIER1.X_IX169.N$212       5.0000     
+ X_MULTIPLIER1.X_CL0_IX356.N$208       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX83.N$7       17.1557N   
+ X_MULTIPLIER1.X_IX359.N$4       17.1557N   
+ X_MULTIPLIER1.X_CL0_IX236.N$11       51.9701N   
+ X_MULTIPLIER1.X_CL0_IX256.N$11       51.9701N   
+ X_MULTIPLIER1.X_CL0_IX226.N$11       53.1409N   
+ X_MULTIPLIER1.X_CL0_IX196.N$11       53.1409N   
+ X_MULTIPLIER1.X_CL0_IX156.N$3       48.7294N   
+ X_MULTIPLIER1.X_CL0_IX166.N$3       48.7294N   
+ X_MULTIPLIER1.X_CL0_IX186.N$3       48.7294N   
+ X_MULTIPLIER1.X_IX283.N$7       5.0000     
+ X_MULTIPLIER1.X_IX250.N$7       5.0000     
+ X_MULTIPLIER1.X_IX79.N$7       5.0000     
+ X_MULTIPLIER1.X_IX240.N$7       5.0000     
+ X_MULTIPLIER1.X_IX140.N$7       5.0000     
+ X_MULTIPLIER1.X_IX230.N$7       5.0000     
+ X_MULTIPLIER1.X_IX180.N$11       53.1409N   
+ X_MULTIPLIER1.X_IX53.N$11       53.1409N   
+ X_MULTIPLIER1.X_IX190.N$11       53.1409N   
+ X_MULTIPLIER1.X_IX99.N$11       53.1409N   
+ X_MULTIPLIER1.X_IX200.N$11       53.1409N   
+ X_MULTIPLIER1.X_IX157.N$11       53.1409N   
+ X_MULTIPLIER1.X_IX210.N$11       5.0000     
+ X_MULTIPLIER1.X_IX217.N$11       5.0000     
+ X_MULTIPLIER1.X_CL0_IX276.N$11       53.1409N   
+ X_MULTIPLIER1.X_CL0_IX246.N$11       51.9688N   
+ X_MULTIPLIER1.X_IX220.N$11       5.0000     
+ X_MULTIPLIER1.X_IX197.N$11       5.0000     
+ X_MULTIPLIER1.X_IX300.N$11       5.0000     
+ X_MULTIPLIER1.X_IX111.N$212       29.9587N   
+ X_MULTIPLIER1.X_CL0_IX393.N$5       3.6004N    
+ X_MULTIPLIER1.X_IX169.N$213       536.3398P  
+ X_MULTIPLIER1.X_IX169.N$3       15.8556N   
+ X_MULTIPLIER1.X_IX169.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX83.N$10       5.0000     
+ X_MULTIPLIER1.X_CL0_IX83.N$6       4.1543     
+ X_MULTIPLIER1.X_CL0_IX83.N$5       5.0000     
+ X_MULTIPLIER1.X_CL0_IX83.N$4       29.0742M   
+ X_MULTIPLIER1.X_IX359.N$7       5.0000     
+ X_MULTIPLIER1.X_IX359.N$3       4.1543     
+ X_MULTIPLIER1.X_IX359.N$2       5.0000     
+ X_MULTIPLIER1.X_IX359.N$1       29.0742M   
+ X_MULTIPLIER1.X_CL0_IX226.N$7       5.0000     
+ X_MULTIPLIER1.X_CL0_IX226.N$1       19.8621N   
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$851       2.3832F    
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_1.N$845       4.9415     
+ X_MULTIPLIER1.X_CL0_IX366.N$7       4.1637     
+ X_MULTIPLIER1.X_CL0_IX366.N$9       5.0000     
+ X_MULTIPLIER1.X_CL0_IX206.N$4      -454.2240U  
+ X_MULTIPLIER1.X_CL0_IX286.N$5      -11.6912U   
+ X_MULTIPLIER1.X_CL0_IX264.N$8       6.5999N    
+ X_MULTIPLIER1.X_CL0_IX264.N$4       5.0000     
+ X_MULTIPLIER1.X_CL0_IX154.N$211       4.9551     
+ X_MULTIPLIER1.X_CL0_IX154.N$1       4.9551     
+ X_MULTIPLIER1.X_CL0_IX164.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX320.N$8       4.3012     
+ X_MULTIPLIER1.X_CL0_IX156.N$1       981.7088M  
+ X_MULTIPLIER1.X_CL0_IX166.N$1       981.7088M  
+ X_MULTIPLIER1.X_CL0_IX186.N$1       981.7088M  
+ X_MULTIPLIER1.X_CL0_IX165.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX314.N$418       924.2251M  
+ X_MULTIPLIER1.X_CL0_IX314.N$211       958.0044M  
+ X_MULTIPLIER1.X_IX283.N$10       944.4893M  
+ X_MULTIPLIER1.X_IX283.N$6       384.6290A  
+ X_MULTIPLIER1.X_IX283.N$5       4.9527     
+ X_MULTIPLIER1.X_IX283.N$4       25.9850N   
+ X_MULTIPLIER1.X_IX250.N$10       944.4893M  
+ X_MULTIPLIER1.X_IX250.N$6       384.6290A  
+ X_MULTIPLIER1.X_IX250.N$5       4.9527     
+ X_MULTIPLIER1.X_IX250.N$4       25.9850N   
+ X_MULTIPLIER1.X_IX79.N$10       944.4893M  
+ X_MULTIPLIER1.X_IX79.N$6       384.6290A  
+ X_MULTIPLIER1.X_IX79.N$5       4.9527     
+ X_MULTIPLIER1.X_IX79.N$4       25.9850N   
+ X_MULTIPLIER1.X_IX240.N$10       944.4893M  
+ X_MULTIPLIER1.X_IX240.N$6       384.6290A  
+ X_MULTIPLIER1.X_IX240.N$5       4.9527     
+ X_MULTIPLIER1.X_IX240.N$4       25.9850N   
+ X_MULTIPLIER1.X_IX140.N$10       944.4893M  
+ X_MULTIPLIER1.X_IX140.N$6       384.6290A  
+ X_MULTIPLIER1.X_IX140.N$5       4.9527     
+ X_MULTIPLIER1.X_IX140.N$4       25.9850N   
+ X_MULTIPLIER1.X_IX230.N$10       944.4893M  
+ X_MULTIPLIER1.X_IX230.N$6       384.6290A  
+ X_MULTIPLIER1.X_IX230.N$5       4.9527     
+ X_MULTIPLIER1.X_IX230.N$4       25.9850N   
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$851       4.3012     
+ X_MULTIPLIER1.X_QR0_REG_M_O_3.N$845       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$851       4.3012     
+ X_MULTIPLIER1.X_QR0_REG_M_O_2.N$845       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$851       4.3012     
+ X_MULTIPLIER1.X_QR0_REG_M_O_1.N$845       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$851       4.3012     
+ X_MULTIPLIER1.X_QR0_REG_M_O_0.N$845       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$851       4.3012     
+ X_MULTIPLIER1.X_AS0_REG_M_O_0.N$845       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$851       4.3012     
+ X_MULTIPLIER1.X_AR0_REG_M_SHIFTBIT.N$845       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$851       4.3012     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_3.N$845       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$851       4.3012     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_2.N$845       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$851       4.3012     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_1.N$845       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$851       4.3012     
+ X_MULTIPLIER1.X_QR0_REG_M_REG_0.N$845       5.0000     
+ X_MULTIPLIER1.X_IX370.N$4       990.6955M  
+ X_MULTIPLIER1.X_IX370.N$8       37.0471N   
+ X_MULTIPLIER1.X_CL0_IX276.N$7       5.0000     
+ X_MULTIPLIER1.X_CL0_IX276.N$1       19.8621N   
+ X_MULTIPLIER1.X_CL0_IX246.N$7       4.9529     
+ X_MULTIPLIER1.X_CL0_IX246.N$1       389.8794A  
+ X_MULTIPLIER1.X_IX260.N$7       5.0000     
+ X_MULTIPLIER1.X_IX260.N$1       29.0742M   
+ X_MULTIPLIER1.X_IX429.N$7       5.0000     
+ X_MULTIPLIER1.X_IX429.N$1       29.0742M   
+ X_MULTIPLIER1.X_IX270.N$7       5.0000     
+ X_MULTIPLIER1.X_IX270.N$1       29.0742M   
+ X_MULTIPLIER1.X_IX409.N$7       5.0000     
+ X_MULTIPLIER1.X_IX409.N$1       29.0742M   
+ X_MULTIPLIER1.X_IX280.N$7       5.0000     
+ X_MULTIPLIER1.X_IX280.N$1       27.9360M   
+ X_MULTIPLIER1.X_IX389.N$7       5.0000     
+ X_MULTIPLIER1.X_IX389.N$1       27.9360M   
+ X_MULTIPLIER1.X_IX290.N$7       5.0000     
+ X_MULTIPLIER1.X_IX290.N$1       27.9360M   
+ X_MULTIPLIER1.X_IX369.N$7       5.0000     
+ X_MULTIPLIER1.X_IX369.N$1       27.9360M   
+ X_MULTIPLIER1.X_IX300.N$7       5.0000     
+ X_MULTIPLIER1.X_IX300.N$1       4.1543     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$851       2.3832F    
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_1.N$845       4.9415     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$851       2.3835F    
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_2.N$845       4.9404     
+ X_MULTIPLIER1.X_CL0_IX174.N$8       102.0190A  
+ X_MULTIPLIER1.X_CL0_IX174.N$4       5.0000     
+ X_MULTIPLIER1.X_IX111.N$213       14.9793N   
+ X_MULTIPLIER1.X_IX111.N$3       4.1637     
+ X_MULTIPLIER1.X_IX111.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX103.N$5       43.7006M   
+ X_MULTIPLIER1.CL0_NX313       30.6736N   
+ X_MULTIPLIER1.CL0_NX392       5.0000     
+ X_MULTIPLIER1.CL0_NX160       7.8038N    
+ X_MULTIPLIER1.NX168       31.7111N   
+ X_MULTIPLIER1.CL0_NX82       5.0000     
+ X_MULTIPLIER1.CL0_NX235       5.0000     
+ X_MULTIPLIER1.CL0_NX255       5.0000     
+ X_MULTIPLIER1.CL0_NX225       5.0000     
+ X_MULTIPLIER1.CL0_NX195       5.0000     
+ X_MULTIPLIER1.CL0_NX155       5.0000     
+ X_MULTIPLIER1.CL0_NX165       5.0000     
+ X_MULTIPLIER1.CL0_NX185       5.0000     
+ X_MULTIPLIER1.NX282       51.9701N   
+ X_MULTIPLIER1.NX249       51.9701N   
+ X_MULTIPLIER1.NX78       51.9701N   
+ X_MULTIPLIER1.NX239       51.9701N   
+ X_MULTIPLIER1.NX136       51.9701N   
+ X_MULTIPLIER1.NX229       51.9701N   
+ X_MULTIPLIER1.NX179       5.0000     
+ X_MULTIPLIER1.NX52       5.0000     
+ X_MULTIPLIER1.NX189       5.0000     
+ X_MULTIPLIER1.NX98       5.0000     
+ X_MULTIPLIER1.NX199       5.0000     
+ X_MULTIPLIER1.NX156       5.0000     
+ X_MULTIPLIER1.NX209       17.1557N   
+ X_MULTIPLIER1.NX216       17.1557N   
+ X_MULTIPLIER1.NX196       17.1557N   
+ X_MULTIPLIER1.NX219       17.1557N   
+ X_MULTIPLIER1.NX299       17.1557N   
+ X_MULTIPLIER1.CL0_NX275       5.0000     
+ X_MULTIPLIER1.CL0_NX245       5.0000     
+ X_MULTIPLIER1.X_CL0_IX415.N$411       5.0000     
+ X_MULTIPLIER1.X_IX359.N$11       5.0000     
+ X_MULTIPLIER1.X_CL0_IX286.N$214       29.9587N   
+ X_MULTIPLIER1.X_IX111.N$4       5.0000     
+ X_MULTIPLIER1.X_CL0_IX256.N$7       4.9527     
+ X_MULTIPLIER1.X_CL0_IX256.N$1       376.4503A  
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$851       2.3835F    
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_0.N$845       4.9404     
+ X_MULTIPLIER1.X_CL0_IX286.N$6       14.9794N   
+ X_MULTIPLIER1.X_CL0_IX286.N$11       5.0000     
+ X_MULTIPLIER1.X_CL0_IX320.N$4       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$851       4.3012     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_0.N$845       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$851       4.3012     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_1.N$845       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$851       4.3012     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_2.N$845       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$851       4.3012     
+ X_MULTIPLIER1.X_AS0_REG_M_O_2.N$845       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$851       4.3012     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_3.N$845       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$851       4.3012     
+ X_MULTIPLIER1.X_MR0_REG_M_O_3.N$845       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$851       4.3012     
+ X_MULTIPLIER1.X_AR0_REG_M_O_3.N$845       5.0000     
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$851       4.3012     
+ X_MULTIPLIER1.X_AR0_REG_M_O_2.N$845       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$851       16.5883N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_1.N$845       918.8975M  
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$851       16.5883N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_1.N$845       918.8975M  
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$851       4.3012     
+ X_MULTIPLIER1.X_AR0_REG_M_O_1.N$845       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$851       16.5883N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_0.N$845       918.8975M  
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$851       16.5883N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_0.N$845       918.8975M  
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$851       4.3012     
+ X_MULTIPLIER1.X_AR0_REG_M_O_0.N$845       5.0000     
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$851       16.5883N   
+ X_MULTIPLIER1.X_MR0_REG_M_REG_2.N$845       918.8975M  
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$851       16.5883N   
+ X_MULTIPLIER1.X_MR0_REG_M_O_2.N$845       918.8975M  
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$851       4.3012     
+ X_MULTIPLIER1.X_AR0_REG_M_REG_3.N$845       5.0000     
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$851       4.3012     
+ X_MULTIPLIER1.X_QR0_REG_M_SHIFTBIT.N$845       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$851       2.3835F    
+ X_MULTIPLIER1.X_CL0_REG_M_MSIGNAL.N$845       4.9404     
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$851       2.3835F    
+ X_MULTIPLIER1.X_CL0_REG_M_ASIGNAL_0.N$845       4.9404     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$851       2.3832F    
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_1.N$845       4.9415     
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$851       2.3832F    
+ X_MULTIPLIER1.X_CL0_REG_M_QSIGNAL_0.N$845       4.9415     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$851       2.3832F    
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_1.N$845       4.9415     
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$851       2.3832F    
+ X_MULTIPLIER1.X_CL0_REG_M_CNT_0.N$845       4.9415     
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$851       2.3832F    
+ X_MULTIPLIER1.X_CL0_REG_M_NEXTSTATE_2.N$845       4.9415     
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$851       2.3832F    
+ X_MULTIPLIER1.X_CL0_REG_M_FINISHED.N$845       4.9415     
+ X_MULTIPLIER1.CL0_NX416       7.8038N    
+ X_MULTIPLIER1.NX358       17.1557N   
+ X_MULTIPLIER1.CL0_NX355       5.0000     
+ X_MULTIPLIER1.CL0_NX319       5.0000     
+ X_MULTIPLIER1.CL0_NX369       5.0000     
+ X_MULTIPLIER1.CL0_NX285       5.0000     
+ X_MULTIPLIER1.NX110       17.1557N   
+ X_MULTIPLIER1.X_IX229.N$212       5.0000     
+ X_MULTIPLIER1.X_CL0_IX206.N$214       29.9610N   
+ X_MULTIPLIER1.X_CL0_IX117.N$3       5.0000     
+ X_MULTIPLIER1.X_IX229.N$213       536.3390P  
+ X_MULTIPLIER1.X_IX229.N$3       15.8556N   
+ X_MULTIPLIER1.X_IX229.N$1       5.0000     
+ X_MULTIPLIER1.X_CL0_IX356.N$4       5.0000     
+ X_MULTIPLIER1.X_CL0_IX370.N$9       536.3390P  
+ X_MULTIPLIER1.X_CL0_IX370.N$4       5.0000     
+ X_MULTIPLIER1.X_CL0_IX370.N$8       29.0580M   
+ X_MULTIPLIER1.X_CL0_IX216.N$10       5.0000     
+ X_MULTIPLIER1.X_CL0_IX216.N$4       536.3390P  
+ X_MULTIPLIER1.X_CL0_IX206.N$6       14.9805N   
+ X_MULTIPLIER1.X_CL0_IX206.N$5      -454.2240U  
+ X_MULTIPLIER1.X_CL0_IX206.N$11       5.0000     
+ X_MULTIPLIER1.X_CL0_IX184.N$8       3.8776N    
+ X_MULTIPLIER1.X_CL0_IX184.N$4       4.9848     
+ X_MULTIPLIER1.X_CL0_IX320.N$6       40.5845M   
+ X_MULTIPLIER1.X_CL0_IX320.N$14       5.0000     
+ X_MULTIPLIER1.X_CL0_IX117.N$2       536.3390P  
+ X_MULTIPLIER1.X_CL0_IX117.N$1       5.0000     
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$851       4.3012     
+ X_MULTIPLIER1.X_AS0_REG_M_O_1.N$845       5.0000     
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$851       2.3832F    
+ X_MULTIPLIER1.X_CL0_REG_M_ADDSUBSIGNAL.N$845       4.9415     
+ X_MULTIPLIER1.NX228       31.7111N   
+ X_MULTIPLIER1.CL0_NX116       17.1557N   
+ X_MULTIPLIER1.CL0_NX205       5.0000     
+ X_MULTIPLIER1.X_CL0_IX196.N$7       5.0000     
+ X_MULTIPLIER1.X_CL0_IX196.N$1       19.8621N   
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$851       2.3756F    
+ X_MULTIPLIER1.X_CL0_REG_M_QNEG.N$845       4.9729     
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$851       4.3012     
+ X_MULTIPLIER1.X_AS0_REG_M_O_3.N$845       5.0000     
+
+
+
+   VOLTAGE SOURCE CURRENT
+
+NAME      CURRENT      VOLTAGE      POWER        
+VGDMODEL   0.0000       0.0000       0.0000      
+VDDMODEL  -5.8125N      5.0000      -29.0624N    
+VFORCE__CLK   0.0000       0.0000       0.0000      
+VFORCE__START   0.0000       0.0000       0.0000      
+VFORCE__A1   0.0000       5.0000       0.0000      
+VFORCE__A0   0.0000       5.0000       0.0000      
+VFORCE__B2   0.0000       5.0000       0.0000      
+VFORCE__B1   0.0000       5.0000       0.0000      
+VFORCE__B0   0.0000       5.0000       0.0000      
+
+   TOTAL POWER DISSIPATION:  29.0624N    WATTS
+
+
+
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=1.000000e-03
+
+................................................
+Simulation progress           : 10% (t = 102.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 700    ( 0h  0mn  1s 700)
+................................................
+Simulation progress           : 20% (t = 202.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 190    ( 0h  0mn  2s 890)
+................................................
+Simulation progress           : 30% (t = 301.4855 N)
+Elapsed CPU time              :  0h  0mn  1s 250    ( 0h  0mn  4s 140)
+................................................
+Simulation progress           : 40% (t = 402.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 260    ( 0h  0mn  5s 400)
+................................................
+Simulation progress           : 50% (t = 502.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 190    ( 0h  0mn  6s 590)
+................................................
+Simulation progress           : 60% (t = 602.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 530    ( 0h  0mn  8s 120)
+................................................
+Simulation progress           : 70% (t = 702.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 170    ( 0h  0mn  9s 290)
+................................................
+Simulation progress           : 80% (t = 802.0000 N)
+Elapsed CPU time              :  0h  0mn  1s  80    ( 0h  0mn 10s 370)
+................................................
+Simulation progress           : 90% (t = 902.0000 N)
+Elapsed CPU time              :  0h  0mn  0s 570    ( 0h  0mn 10s 940)
+................................................
+Simulation progress           : 100% (t = 1.0000 U)
+Elapsed CPU time              :  0h  0mn  0s 610    ( 0h  0mn 11s 550)
+
+
+
+1*************** 3-Mar-2022 ***********************  ELDO 2009.2c (64 bits)  (v7.2_4.1)  ***********************19:08:04*****************
+
+0* Component: /home/gota/EECS301/lab3/TopModel_Multiplier  Viewpoint: ami05a
+0****                 ACCOUNTING INFORMATION                                TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+    NUNODS NCNODS NUMNOD   NUMEL   DIODES    BJT  JFET  MOSFET
+
+        18   1343   1343    2391        0      0     0    2382
+
+
+    NSTOP    NTERM    PERSPA  
+
+     1335    10233 9.943e+01
+
+    NUMTTP  NUMRTP  LTERTP  LTERTPNW NWNOCON
+
+      2756      50      50      50       0
+
+  DIGITAL  INWCALL    ITERNW   MEMSIZE
+
+        0    16133 3.501e+00  150077440
+
+    NDEVCALL       NKIRCH  NMAXCALL      ITERM     LATENCY
+
+     3744666         9817         7   9.35e-01   0.000e+00%
+
+
+  TRANSIENT JOB TIME                11
+
+
+
+
+***>CPU TIME 11s 550ms <***
+
+***>MESSAGE SUMMARY: 1 warning
+
+***>GLOBAL CPU TIME 11s 820ms <***
+
+
+***>GLOBAL ELAPSED TIME 14s <***
+
+
+  Job started at  3-Mar-2022 19:08:02
+  Job end at      3-Mar-2022 19:08:16
+
+  Run on Pandoras-Friend (Linux 5.13.0-30-generic)
+

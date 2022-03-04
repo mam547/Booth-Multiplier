@@ -1,0 +1,10 @@
+A 5 u mgc_schematic 62212d447e83.03.7f.00.01.01.00.b9.51 2 2 1 0
+V v 1 1 62212d447e83.03.7f.00.01.01.01.b9.51
+F o 0 ""
+V v 2 1 62212d448475.03.7f.00.01.01.00.b9.51
+F o 0 ""
+O 2
+R cspuv 0 "/home/gota/EECS301/lab3/AddSub_V/AddSub_S/AddSub/schematic/sheet1" 1 mgc_sheet 62212d447ed7.03.7f.00.01.01.01.b9.51 62212d447ed7.03.7f.00.01.01.00.b9.51
+O 1
+R cspuv 0 "/home/gota/EECS301/lab3/AddSub_V/AddSub_S/AddSub/schematic/sheet1" 1 mgc_sheet 62212d447ed7.03.7f.00.01.01.01.b9.51 62212d447ed7.03.7f.00.01.01.00.b9.51
+P "eddm__refer_state" "eddm__refer_floating"

@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 622147010970.03.7f.00.01.01.00.c8.84 14 2 1 0
+V v 12 1 62216311adb7.03.7f.00.01.01.00.c8.84
+F o 0 ""
+V v 13 1 622163467707.03.7f.00.01.01.00.c8.84
+F o 0 ""
+V v 14 1 62216357338d.03.7f.00.01.01.00.c8.84
+F o 0 ""
+O 14
+R cspuv 0 "/home/gota/EECS301/lab3/TopModel/schematic/sheet1" 13 mgc_sheet 62216357337a.03.7f.00.01.01.00.c8.84 622147010a87.03.7f.00.01.01.00.c8.84
+O 13
+R cspuv 0 "/home/gota/EECS301/lab3/TopModel/schematic/sheet1" 12 mgc_sheet 6221634676d8.03.7f.00.01.01.00.c8.84 622147010a87.03.7f.00.01.01.00.c8.84
+O 12
+R cspuv 0 "/home/gota/EECS301/lab3/TopModel/schematic/sheet1" 11 mgc_sheet 62216311ad64.03.7f.00.01.01.00.c8.84 622147010a87.03.7f.00.01.01.00.c8.84

@@ -1,0 +1,13 @@
+A 5 u mgc_schematic 622136fceec2.03.7f.00.01.01.00.b3.d9 18 2 1 0
+V v 16 1 62215599b682.03.7f.00.01.01.00.c8.84
+F o 0 ""
+V v 17 1 622155dcb577.03.7f.00.01.01.00.c8.84
+F o 0 ""
+V v 18 1 622156e35e04.03.7f.00.01.01.00.c8.84
+F o 0 ""
+O 18
+R cspuv 0 "/home/gota/EECS301/lab3/TopModel_Multiplier/schematic/sheet1" 17 mgc_sheet 622156e35de9.03.7f.00.01.01.00.c8.84 622136fcef30.03.7f.00.01.01.00.b3.d9
+O 17
+R cspuv 0 "/home/gota/EECS301/lab3/TopModel_Multiplier/schematic/sheet1" 16 mgc_sheet 622155dcb553.03.7f.00.01.01.00.c8.84 622136fcef30.03.7f.00.01.01.00.b3.d9
+O 16
+R cspuv 0 "/home/gota/EECS301/lab3/TopModel_Multiplier/schematic/sheet1" 15 mgc_sheet 62215599b634.03.7f.00.01.01.00.c8.84 622136fcef30.03.7f.00.01.01.00.b3.d9

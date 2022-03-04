@@ -1,0 +1,10 @@
+A 5 u mgc_schematic 622147cf225c.03.7f.00.01.01.00.cd.22 2 2 1 0
+V v 1 1 622147cf225c.03.7f.00.01.01.01.cd.22
+F o 0 ""
+V v 2 1 622147cf28c9.03.7f.00.01.01.00.cd.22
+F o 0 ""
+O 2
+R cspuv 0 "/home/gota/EECS301/lab3/Areg_V/Areg_S/Areg/schematic/sheet1" 1 mgc_sheet 622147cf2293.03.7f.00.01.01.01.cd.22 622147cf2293.03.7f.00.01.01.00.cd.22
+O 1
+R cspuv 0 "/home/gota/EECS301/lab3/Areg_V/Areg_S/Areg/schematic/sheet1" 1 mgc_sheet 622147cf2293.03.7f.00.01.01.01.cd.22 622147cf2293.03.7f.00.01.01.00.cd.22
+P "eddm__refer_state" "eddm__refer_floating"

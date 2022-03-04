@@ -1,0 +1,12 @@
+A 5 u Eddm_part 622136972e50.03.7f.00.01.01.00.c3.0b 2 2 2 0
+V v 1 1 622136972e51.03.7f.00.01.01.00.c3.0b
+F f 1 "part.part_1"
+V v 2 1 622136974437.03.7f.00.01.01.00.c3.0b
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/gota/EECS301/lab3/Multiplier_V/Multiplier_S/Multiplier/Multiplier" 1 mgc_symbol 622136972da5.03.7f.00.01.01.01.c3.0b 622136972da5.03.7f.00.01.01.00.c3.0b
+R csduv 1 "/home/gota/EECS301/lab3/Multiplier_V/Multiplier_S/Multiplier/schematic" 1 mgc_schematic 622136972f6d.03.7f.00.01.01.01.c3.0b 622136972f6d.03.7f.00.01.01.00.c3.0b
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/gota/EECS301/lab3/Multiplier_V/Multiplier_S/Multiplier/Multiplier" 1 mgc_symbol 622136972da5.03.7f.00.01.01.01.c3.0b 622136972da5.03.7f.00.01.01.00.c3.0b

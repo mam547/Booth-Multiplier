@@ -1,0 +1,12 @@
+A 5 u Eddm_design_viewpoint 6221544f3eae.03.7f.00.01.01.00.c8.84 1 2 3 0
+V v 1 4 6221544f3eae.03.7f.00.01.01.01.c8.84
+F f 1 "eldonet.dvpt_1"
+F o 0 
+F o 0 
+F o 0 
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/gota/EECS301/lab3/TopModel_Multiplier/part" 1 Eddm_part 6221373254ae.03.7f.00.01.01.01.b3.d9 6221373254ae.03.7f.00.01.01.00.b3.d9
+R cspuv 1 "/home/gota/EECS301/lab3/TopModel_Multiplier/schematic" 1 mgc_schematic 622136fceec2.03.7f.00.01.01.01.b3.d9 622136fceec2.03.7f.00.01.01.00.b3.d9
+P "eddm__refer_state" "eddm__refer_floating"
+R cspuv 2 "/home/gota/EECS301/lab3/TopModel_Multiplier/eldonet" 1 Eddm_ba_mgr 6221544f3f6a.03.7f.00.01.01.01.c8.84 6221544f3f6a.03.7f.00.01.01.00.c8.84

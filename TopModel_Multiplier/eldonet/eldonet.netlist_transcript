@@ -1,0 +1,412 @@
+// *************************************************************************
+// Warning: This Linux distribution is not supported.
+// 
+// Supported runtime operating systems for this 64 bit application are: 
+// RHEL 3  64 bit
+// RHEL 4  64 bit
+// RHEL 5  64 bit
+// SLES 9  64 bit
+// SLES 10 64 bit
+// *************************************************************************
+// *************************************************************************
+// Warning: This Linux distribution is not supported.
+// 
+// Supported runtime operating systems for this 64 bit application are: 
+// RHEL 3  64 bit
+// RHEL 4  64 bit
+// RHEL 5  64 bit
+// SLES 9  64 bit
+// SLES 10 64 bit
+// *************************************************************************
+//  ICnet  v2008.2_10.1 (2008.2i)  Tue May 11 17:04:35 PDT 2010
+//  Core Libraries  v2008.2_10.1 Tue May 11 17:22:44 PDT 2010
+//
+//             Copyright Mentor Graphics Corporation 1982
+//
+//                      All Rights Reserved.
+//
+//    THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+//      WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR
+//           ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+//
+//  Mentor Graphics software executing under x86_64 Linux.
+//
+
+
+//  Invocation args:  -lvs -o /home/gota/EECS301/lab3/TopModel_Multiplier/TopModel_Multiplier.src.net -check -preserve_case -spice_top_sub -dmsfile /home/gota/EECS301/lab3/TopModel_Multiplier/ami05a/design.dms /home/gota/EECS301/lab3/TopModel_Multiplier/eldonet
+
+// **** Reading </home/gota/EECS301/lab3/TopModel_Multiplier/eldonet> for LVS netlist ****
+
+// Checking 26 sheet(s) for out of date references to symbols and interfaces...
+// Done.
+// Parsing file '/mgc/adk3_1/parts/adk_symbols/pmos4/@ncf.dir/pmos4.ncf' succeeded.
+// Parsing file '/mgc/adk3_1/parts/adk_symbols/nmos4/@ncf.dir/nmos4.ncf' succeeded.
+// NOTE: There is no part interface for the top level schematic.  The external nets in the schematic
+//       are being scanned to create the pin names for the top level subckt.
+Processing [/home/gota/EECS301/lab3/TopModel_Multiplier] [TopModel_Multiplier/TopModel_Multiplier] [schematic]
+Processing [/home/gota/EECS301/lab3/Multiplier_V/Multiplier_S/Multiplier] [Multiplier/Multiplier] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix109'
+Processing [$ADK/parts/xnor2] [xnor2/xnor2] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix103'
+Processing [$ADK/parts/nand02_2x] [nand02_2x/nand02_2x] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix293'
+Processing [$ADK/parts/xor2] [xor2/xor2] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix111'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix311'
+Processing [$ADK/parts/inv02] [inv02/inv02] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix413'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix396'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix45'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix358'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix546'
+Processing [$ADK/parts/buf02] [buf02/buf02] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix544'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix475'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix176'
+Processing [$ADK/parts/ao21] [ao21/ao21] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix322'
+Processing [$ADK/parts/nor03_2x] [nor03_2x/nor03_2x] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix174'
+Processing [$ADK/parts/aoi21] [aoi21/aoi21] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix341'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/reg_m_Result_5'
+Processing [$ADK/parts/dff] [dff/dff] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/reg_m_Result_6'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/reg_m_Result_7'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_Finished'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_NextState_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_Cnt_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_Cnt_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_Cnt_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_QSignal_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_QSignal_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_ASignal_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_ASignal_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_AddSubSignal'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_MSignal'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix71'
+Processing [$ADK/parts/mux21_ni] [mux21_ni/mux21_ni] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix300'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix369'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix290'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix389'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix280'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix409'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix270'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix429'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix260'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix197'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix220'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix246'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix276'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix370'
+Processing [$ADK/parts/aoi22] [aoi22/aoi22] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix239'
+Processing [$ADK/parts/nor02ii] [nor02ii/nor02ii] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix435'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix107'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/qr0_reg_m_ShiftBit'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/qr0_reg_m_Reg_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/qr0_reg_m_Reg_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/qr0_reg_m_Reg_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/qr0_reg_m_Reg_3'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ar0_reg_m_ShiftBit'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ar0_reg_m_Reg_3'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/as0_reg_m_O_3'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/mr0_reg_m_O_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/mr0_reg_m_Reg_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ar0_reg_m_O_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/mr0_reg_m_O_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/mr0_reg_m_Reg_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ar0_reg_m_O_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/mr0_reg_m_O_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/mr0_reg_m_Reg_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ar0_reg_m_O_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ar0_reg_m_O_3'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/mr0_reg_m_O_3'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/mr0_reg_m_Reg_3'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/as0_reg_m_O_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/as0_reg_m_O_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/as0_reg_m_O_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/qr0_reg_m_O_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/reg_m_Result_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/reg_m_Result_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/qr0_reg_m_O_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/reg_m_Result_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/qr0_reg_m_O_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/reg_m_Result_3'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/qr0_reg_m_O_3'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/reg_m_Result_4'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ar0_reg_m_Reg_2'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ar0_reg_m_Reg_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ar0_reg_m_Reg_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix315'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix325'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix335'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix355'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix345'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix217'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix210'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix157'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix200'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix99'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix190'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix53'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix180'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix305'
+Processing [$ADK/parts/ao22] [ao22/ao22] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix230'
+Processing [$ADK/parts/mux21] [mux21/mux21] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix140'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix240'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix79'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix250'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix283'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix342'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix350'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix336'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix31'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix37'
+Processing [$ADK/parts/nor02_2x] [nor02_2x/nor02_2x] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix481'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix479'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix477'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix425'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix423'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix314'
+Processing [$ADK/parts/nor04] [nor04/nor04] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix372'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix165'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix266'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix117'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix186'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix166'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix156'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix320'
+Processing [$ADK/parts/aoi221] [aoi221/aoi221] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix346'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix164'
+Processing [$ADK/parts/nor03] [nor03/nor03] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix154'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix264'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix184'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix333'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix286'
+Processing [$ADK/parts/ao32] [ao32/ao32] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix206'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix127'
+Processing [$ADK/parts/or02] [or02/or02] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix185'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix363'
+Processing [$ADK/parts/and02] [and02/and02] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix366'
+Processing [$ADK/parts/oai21] [oai21/oai21] [schematic]
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_NextState_0'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_NextState_1'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_reg_m_QNeg'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix196'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix226'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix256'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix236'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix359'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix216'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix83'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix370'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix101'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix356'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix229'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix227'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix225'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix165'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix167'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix169'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix393'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix191'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix335'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix352'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix63'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix299'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix411'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix15'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix161'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/ix548'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix409'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix415'
+
+ *** warning *** : Unable to evaluate expression '(technology)' in MODEL property on instance '/MULTIPLIER1/cl0_ix417'
+Primitive [$ADK/parts/adk_symbols/nmos4] [MG_STD/nmos3] [SPICE=PRIM] (NCF entry line:8 file:/mgc/adk3_1/parts/adk_symbols/nmos4/@ncf.dir/nmos4.ncf)
+Primitive [$ADK/parts/adk_symbols/pmos4] [MG_STD/pmos3] [SPICE=PRIM] (NCF entry line:8 file:/mgc/adk3_1/parts/adk_symbols/pmos4/@ncf.dir/pmos4.ncf)
+
+**** Writing </home/gota/EECS301/lab3/TopModel_Multiplier/eldonet> netlist for LVS ****
+
+Number of cells: 26
+Number of primitive instances: 2382
+
+Done...
+// Registration file '/mgc/adk3_1/parts/adk_symbols/pmos4/@ncf.dir/pmos4.ncf' closed.
+// Registration file '/mgc/adk3_1/parts/adk_symbols/nmos4/@ncf.dir/nmos4.ncf' closed.

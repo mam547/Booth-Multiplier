@@ -1,0 +1,12 @@
+A 5 u Eddm_part 62212d447d81.03.7f.00.01.01.00.b9.51 2 2 2 0
+V v 1 1 62212d447d81.03.7f.00.01.01.01.b9.51
+F f 1 "part.part_1"
+V v 2 1 62212d44840d.03.7f.00.01.01.00.b9.51
+F f 2 "part.part_2"
+O 2
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/gota/EECS301/lab3/AddSub_V/AddSub_S/AddSub/AddSub" 1 mgc_symbol 62212d447d16.03.7f.00.01.01.01.b9.51 62212d447d16.03.7f.00.01.01.00.b9.51
+R csduv 1 "/home/gota/EECS301/lab3/AddSub_V/AddSub_S/AddSub/schematic" 1 mgc_schematic 62212d447e83.03.7f.00.01.01.01.b9.51 62212d447e83.03.7f.00.01.01.00.b9.51
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R csduv 0 "/home/gota/EECS301/lab3/AddSub_V/AddSub_S/AddSub/AddSub" 1 mgc_symbol 62212d447d16.03.7f.00.01.01.01.b9.51 62212d447d16.03.7f.00.01.01.00.b9.51

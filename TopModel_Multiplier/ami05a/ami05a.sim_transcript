@@ -1,0 +1,238 @@
+Obsolete option -64b ignored
+
+Running eldo on Pandoras-Friend
+with Eldo libraries :
+/mgc/anacad2009_2c/aol/lib/libeldoudm_64.so
+/mgc/anacad2009_2c/aol/lib/libeldomos1_64.so
+/mgc/anacad2009_2c/aol/lib/libeldoekv_64.so
+/mgc/anacad2009_2c/aol/lib/libeldomosp9_64.so
+/mgc/anacad2009_2c/aol/lib/libeldocsem_64.so
+/mgc/anacad2009_2c/aol/lib/libeldomos2_64.so
+/mgc/anacad2009_2c/aol/lib/libeldomos3_64.so
+/mgc/anacad2009_2c/aol/lib/libeldobip_64.so
+/mgc/anacad2009_2c/aol/lib/libeldodio_64.so
+/mgc/anacad2009_2c/aol/lib/libeldojfet_64.so
+/mgc/anacad2009_2c/aol/lib/libeldosoi_64.so
+/mgc/anacad2009_2c/aol/lib/libeldomos4_64.so
+/mgc/anacad2009_2c/aol/lib/libeldoasitft_64.so
+/mgc/anacad2009_2c/aol/lib/libeldohisim_64.so
+/mgc/anacad2009_2c/aol/lib/libeldospmod_64.so
+/mgc/anacad2009_2c/aol/lib/libeldopsp_64.so
+/mgc/anacad2009_2c/aol/lib/libeldomosvar_64.so
+/mgc/anacad2009_2c/aol/lib/libeldomoto_64.so
+/mgc/anacad2009_2c/aol/lib/libeldost_64.so
+/mgc/anacad2009_2c/aol/lib/libeldobnr_64.so
+/mgc/anacad2009_2c/aol/lib/libeldorockw_64.so
+/mgc/anacad2009_2c/aol/lib/libeldopubhicum_64.so
+/mgc/anacad2009_2c/aol/lib/libeldotftsh_64.so
+/mgc/anacad2009_2c/aol/lib/libeldobta_64.so
+/mgc/anacad2009_2c/aol/lib/libeldofas_64.so
+/mgc/anacad2009_2c/aol/lib/libeldofascm_64.so
+/mgc/anacad2009_2c/aol/lib/libeldosdsim_64.so
+/mgc/anacad2009_2c/aol/lib/libeldowire_64.so
+Unable to load VerilogA library libogr_64.so,
+
+libelf.so.0: cannot open shared object file: No such file or directory.
+
+
+
+              Software under License 
+       Copyright Mentor Graphics Corporation
+
+
+
+
+***** PRE-PROCESSING ...
+
+
+
+***** ANALYSIS ....
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+
+***** GENERATION ...
+
+Warning 1615: In file "./EECS301/lab3/TopModel_Multiplier/ami05a/TopModel_Multiplier_ami05a.cir" line 38:
++   COMMAND ".TRAN": Tstep can not be <= 0.0.
++   It is set to Tmax/20.0 = 5.000e-08 s.
+
+***** 0  error(s). 
+***** 1  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION...
+
+
+Memory space allocated (bytes): 139907072
+2394 elements
+1343 nodes
+10 input signals
+
+Eldo VERSION : ELDO 2009.2c (64 bits) Mon Jun  7 11:38:13 GMT 2010
+
+*** DATE:  3-Mar-2022 19:08:04
+
+*** TITLE: * Component: /home/gota/EECS301/lab3/TopModel_Multiplier  Viewpoint: ami05a
+
+TEMPERATURE : 27.000000 degrees C
+
+
+Performing DC analysis...
+
+--> Partitioning circuit...
+--> DC Iteration number 0
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 1
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 2
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 3
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 4
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 5
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 6
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 7
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 8
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 9
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 10
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 11
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 12
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 13
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 14
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 15
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 16
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 17
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 18
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+--> DC Iteration number 19
+ -->Solving block number 1
+ -->Solving block number 100
+ -->Solving block number 200
+
+--> Partitioning circuit...
+
+***> DC CPU TIME 0s 200ms <***
+
+DC:23 iterations FOR DC analysis
+
+   TOTAL POWER DISSIPATION:  29.0624N    WATTS
+
+
+Eldo NEWTON: VNTOL=1.000000e-06 RELTOL=1.000000e-03
+
+Connecting to JWDB server, please wait...
+connected to wdb server : -jwdbhost Pandoras-Friend -jwdbport 41077
+
+Compute from 0.000000 Nano to 1.000000E+03 Nano
+................................................
+Simulation progress           : 10% (t = 102.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 700    ( 0h  0mn  1s 700)
+................................................
+Simulation progress           : 20% (t = 202.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 190    ( 0h  0mn  2s 890)
+................................................
+Simulation progress           : 30% (t = 301.4855 N)
+Elapsed CPU time              :  0h  0mn  1s 250    ( 0h  0mn  4s 140)
+................................................
+Simulation progress           : 40% (t = 402.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 260    ( 0h  0mn  5s 400)
+................................................
+Simulation progress           : 50% (t = 502.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 190    ( 0h  0mn  6s 590)
+................................................
+Simulation progress           : 60% (t = 602.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 530    ( 0h  0mn  8s 120)
+................................................
+Simulation progress           : 70% (t = 702.0000 N)
+Elapsed CPU time              :  0h  0mn  1s 170    ( 0h  0mn  9s 290)
+................................................
+Simulation progress           : 80% (t = 802.0000 N)
+Elapsed CPU time              :  0h  0mn  1s  80    ( 0h  0mn 10s 370)
+................................................
+Simulation progress           : 90% (t = 902.0000 N)
+Elapsed CPU time              :  0h  0mn  0s 570    ( 0h  0mn 10s 940)
+................................................
+Simulation progress           : 100% (t = 1.0000 U)
+Elapsed CPU time              :  0h  0mn  0s 610    ( 0h  0mn 11s 550)
+
+
+***>Current simulation completed
+
+
+
+
+SIMULATION INFORMATION 
+memory size allocated in bytes 150077440
+Latency: 0.000000%
+average number of newton iterations: 3.500713
+nb of components: 2391
+nb of nodes: 1343
+nb of MOS or BIP calls: 3744666
+Number of steps computed: 2756
+
+***>CPU TIME 11s 550ms <***
+
+***>MESSAGE SUMMARY: 1 warning
+
+***>GLOBAL CPU TIME 11s 820ms <***
+
+
+***>GLOBAL ELAPSED TIME 14s <***
+
+

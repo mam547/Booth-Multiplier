@@ -1,0 +1,6 @@
+A 5 u Eddm_ba_mgr 6221544f3f6a.03.7f.00.01.01.00.c8.84 1 2 1 0
+V v 1 1 6221544f3f6a.03.7f.00.01.01.01.c8.84
+F f 1 "eldonet.ba_1"
+O 1
+P "eddm__stream_to_use" "eddm__propl_dstream"
+R cspuv 0 "/home/gota/EECS301/lab3/TopModel_Multiplier/eldonet" 1 Eddm_design_viewpoint 6221544f3eae.03.7f.00.01.01.01.c8.84 6221544f3eae.03.7f.00.01.01.00.c8.84
